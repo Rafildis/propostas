@@ -1,1 +1,939 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposta Comercial — Presença Digital e Vendas | Vamos Viagens × Moca Mídias</title>
+<meta name="description" content="Proposta comercial para Vamos Viagens: criação de site indexável no Google e nas IAs e gestão de tráfego pago com funil de vendas.">
+<meta name="theme-color" content="#372261">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Moca Mídias">
+<meta property="og:title" content="Proposta Comercial — Vamos Viagens | Moca Mídias">
+<meta property="og:description" content="Site indexável e gestão de tráfego pago com funil de vendas para agências de viagem.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ===== TOKENS ===== */
+:root{
+--primary:#372261;--primary-light:#4A2D7A;--primary-dark:#2A1A4A;--primary-ultra-light:#F3EEF9;
+--accent:#D4A843;--accent-hover:#B8922E;
+--text-primary:#1A1A2E;--text-secondary:#5A5A72;--text-light:#8A8A9E;
+--bg-white:#FFFFFF;--bg-alt:#F8F6FC;--border:#E8E0F0;
+--shadow-sm:0 2px 8px rgba(55,34,97,.08);--shadow-md:0 4px 16px rgba(55,34,97,.12);--shadow-lg:0 8px 32px rgba(55,34,97,.16);
+--radius-sm:8px;--radius-md:12px;--radius-lg:16px;--radius-pill:999px;
+--font-heading:'Plus Jakarta Sans',sans-serif;--font-body:'Inter',sans-serif;--container-max:1140px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:var(--font-body);color:var(--text-primary);line-height:1.65;background:var(--bg-white);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--font-heading);font-weight:700;line-height:1.2;color:var(--primary)}
+a{text-decoration:none}
+.container{max-width:var(--container-max);margin:0 auto;padding:0 24px}
+section{padding:80px 0}
+.bg-alt{background:var(--bg-alt)}
+.section-header{text-align:center;margin-bottom:52px}
+.section-header h2{font-size:clamp(28px,4vw,36px);margin-bottom:16px}
+.section-header p{font-size:17px;color:var(--text-secondary);max-width:660px;margin:0 auto}
+.eyebrow{display:inline-block;background:var(--primary-ultra-light);color:var(--primary);padding:6px 16px;border-radius:var(--radius-pill);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:16px}
+.eyebrow-light{background:rgba(255,255,255,.1);color:var(--accent)}
 
+/* ===== HEADER ===== */
+header{background:var(--primary);padding:16px 0;position:sticky;top:0;z-index:100;box-shadow:var(--shadow-md)}
+header .container{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.logo{font-family:var(--font-heading);font-size:21px;font-weight:800;color:#fff;white-space:nowrap}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:22px}
+.nav-links a{color:rgba(255,255,255,.82);font-size:14px;font-weight:500;transition:color .3s}
+.nav-links a:hover{color:var(--accent)}
+.header-cta{background:var(--accent);color:var(--primary-dark);padding:11px 20px;border-radius:var(--radius-sm);font-weight:600;font-size:14px;transition:all .3s;white-space:nowrap}
+.header-cta:hover{background:var(--accent-hover);transform:translateY(-2px)}
+
+/* ===== HERO ===== */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);color:#fff;padding:84px 0 68px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 18% 45%,rgba(212,168,67,.15) 0%,transparent 52%)}
+.hero .container{position:relative;z-index:1}
+.hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.hero-meta span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:7px 15px;border-radius:var(--radius-pill);font-size:12.5px;font-weight:600}
+.hero h1{color:#fff;font-size:clamp(29px,5vw,45px);margin-bottom:18px;max-width:760px}
+.hero h1 em{color:var(--accent);font-style:normal}
+.hero p{font-size:17px;color:rgba(255,255,255,.85);max-width:660px;margin-bottom:30px}
+.hero-buttons{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 28px;border-radius:var(--radius-sm);font-weight:600;font-size:15px;transition:all .3s;cursor:pointer;border:none;font-family:var(--font-body)}
+.btn-primary{background:var(--accent);color:var(--primary-dark)}
+.btn-primary:hover{background:var(--accent-hover);transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.btn-secondary{background:rgba(255,255,255,.1);color:#fff;border:2px solid rgba(255,255,255,.3)}
+.btn-secondary:hover{background:rgba(255,255,255,.2);border-color:#fff}
+.btn-block{width:100%}
+
+/* ===== INFO BAR ===== */
+.info-bar{background:var(--accent);color:var(--primary-dark);padding:14px 0}
+.info-bar .container{display:flex;justify-content:center;gap:36px;flex-wrap:wrap;font-weight:700;font-size:13.5px;text-align:center}
+
+/* ===== CONTEXTO ===== */
+.context-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px;margin-top:36px}
+.context-card{background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius-md);padding:26px;box-shadow:var(--shadow-sm);transition:all .3s}
+.context-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.context-card .ic{font-size:27px;margin-bottom:12px}
+.context-card h3{font-size:17px;margin-bottom:9px}
+.context-card p{font-size:14.5px;color:var(--text-secondary)}
+
+/* ===== AUTORIDADE ===== */
+.authority{display:flex;gap:18px;align-items:flex-start;background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius-md);padding:28px;box-shadow:var(--shadow-sm)}
+.authority-badge{flex-shrink:0;width:46px;height:46px;border-radius:var(--radius-md);background:var(--primary);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:22px}
+.authority h3{font-size:18px;margin-bottom:8px}
+.authority p{font-size:14.5px;color:var(--text-secondary)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:26px}
+.stat{background:var(--primary-ultra-light);border:1px solid var(--border);border-radius:var(--radius-md);padding:20px;text-align:center}
+.stat b{display:block;font-family:var(--font-heading);font-size:26px;font-weight:800;color:var(--primary)}
+.stat span{font-size:12.5px;color:var(--text-secondary)}
+
+/* ===== ABAS DE SERVIÇOS ===== */
+.tabs-nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:34px}
+.tab-btn{background:var(--bg-white);border:2px solid var(--border);color:var(--text-secondary);padding:13px 22px;border-radius:var(--radius-pill);font-family:var(--font-body);font-size:14px;font-weight:600;cursor:pointer;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+.tab-btn:hover{border-color:var(--accent);color:var(--primary)}
+.tab-btn.active{background:var(--primary);border-color:var(--primary);color:#fff}
+.tab-btn.active .tab-price{color:var(--accent)}
+.tab-price{font-size:12px;opacity:.85;font-weight:700}
+.tab-panel{display:none;animation:fade .35s ease}
+.tab-panel.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+.service-card{background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow-md);overflow:hidden}
+.service-head{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;padding:32px}
+.service-head .tagline{display:inline-block;background:rgba(212,168,67,.2);color:var(--accent);padding:5px 14px;border-radius:var(--radius-pill);font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
+.service-head h3{color:#fff;font-size:clamp(21px,3.2vw,27px);margin-bottom:10px}
+.service-head p{color:rgba(255,255,255,.85);font-size:15px;max-width:620px}
+.service-facts{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.service-facts div{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:var(--radius-sm);padding:10px 16px;font-size:13px}
+.service-facts b{color:var(--accent);display:block;font-size:16px;font-family:var(--font-heading)}
+.service-body{padding:32px}
+.block-title{font-size:16px;margin:0 0 16px;display:flex;align-items:center;gap:10px}
+.block-title::before{content:'';width:4px;height:20px;background:var(--accent);border-radius:2px}
+.service-body .block + .block{margin-top:34px}
+
+.check-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px 24px}
+.check-list li{position:relative;padding-left:26px;font-size:14.5px;color:var(--text-secondary);padding-top:4px;padding-bottom:4px}
+.check-list li::before{content:'✓';position:absolute;left:0;top:4px;color:var(--accent);font-weight:800}
+.check-list li strong{color:var(--text-primary)}
+
+.step{display:grid;grid-template-columns:78px 1fr;background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--radius-md);overflow:hidden;margin-bottom:12px}
+.step-num{background:linear-gradient(160deg,var(--primary),var(--primary-light));color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:16px 8px}
+.step-num b{font-family:var(--font-heading);font-size:23px;color:var(--accent)}
+.step-num span{font-size:9.5px;text-transform:uppercase;letter-spacing:.09em;opacity:.85}
+.step-body{padding:18px 22px;background:var(--bg-white)}
+.step-body h4{font-size:15.5px;margin-bottom:6px}
+.step-body p{font-size:13.8px;color:var(--text-secondary);margin-bottom:8px}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{background:var(--primary-ultra-light);border:1px solid var(--border);border-radius:var(--radius-pill);padding:4px 11px;font-size:11.5px;font-weight:500;color:var(--primary)}
+
+.notice{border-left:4px solid var(--accent);background:var(--primary-ultra-light);border-radius:var(--radius-sm);padding:16px 20px;font-size:14px;color:var(--text-secondary);margin-top:22px}
+.notice strong{color:var(--primary)}
+.notice.warn{border-left-color:#C93B48;background:#FDF2F3}
+
+.deliver-table{width:100%;border-collapse:collapse;font-size:14px;margin-top:6px}
+.deliver-table th{background:var(--primary);color:#fff;text-align:left;padding:13px 16px;font-family:var(--font-heading);font-size:13px;font-weight:700}
+.deliver-table td{padding:13px 16px;border-bottom:1px solid var(--border);color:var(--text-secondary);vertical-align:top}
+.deliver-table tr:last-child td{border-bottom:none}
+.deliver-table tbody tr:nth-child(even){background:var(--bg-alt)}
+.deliver-table td strong{color:var(--text-primary)}
+.table-wrap{overflow-x:auto;border-radius:var(--radius-md);border:1px solid var(--border)}
+
+.service-foot{background:var(--bg-alt);border-top:1px solid var(--border);padding:26px 32px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.service-foot .val{font-family:var(--font-heading);font-size:clamp(24px,3.4vw,32px);font-weight:800;color:var(--primary)}
+.service-foot .val small{display:block;font-size:13px;color:var(--text-secondary);font-weight:500;font-family:var(--font-body)}
+
+/* ===== PACOTES ===== */
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:26px;max-width:1020px;margin:0 auto}
+.price-card{background:var(--bg-white);border:2px solid var(--border);border-radius:var(--radius-lg);padding:38px 30px;box-shadow:var(--shadow-sm);transition:all .3s;position:relative;display:flex;flex-direction:column}
+.price-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.price-card.featured{border-color:var(--accent);box-shadow:var(--shadow-md)}
+.price-card.featured::before{content:'Recomendado';position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--accent);color:var(--primary-dark);padding:5px 18px;border-radius:var(--radius-pill);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
+.price-card .label{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--primary-light);margin-bottom:8px}
+.price-card h3{font-size:19px;margin-bottom:16px}
+.price{font-family:var(--font-heading);font-size:clamp(28px,3.8vw,36px);font-weight:800;color:var(--primary);line-height:1.1}
+.price small{font-size:14px;color:var(--text-secondary);font-weight:500;font-family:var(--font-body)}
+.price-old{font-size:14px;color:var(--text-light);text-decoration:line-through;margin-top:4px}
+.price-card ul{list-style:none;margin:20px 0 24px;flex-grow:1}
+.price-card ul li{padding:7px 0;font-size:14px;color:var(--text-secondary);position:relative;padding-left:25px}
+.price-card ul li::before{content:'✓';position:absolute;left:0;color:var(--accent);font-weight:800}
+.benchmark-note{margin:28px auto 0;text-align:center;font-size:13.5px;color:var(--text-light);background:var(--primary-ultra-light);border:1px solid var(--border);border-radius:var(--radius-md);padding:18px 24px;max-width:800px}
+.benchmark-note strong{color:var(--primary)}
+
+/* ===== CRONOGRAMA ===== */
+.timeline{max-width:820px;margin:0 auto}
+.tl-item{display:grid;grid-template-columns:104px 1fr;gap:0;margin-bottom:12px}
+.tl-when{background:var(--primary);color:#fff;border-radius:var(--radius-md) 0 0 var(--radius-md);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px 10px}
+.tl-when b{font-family:var(--font-heading);font-size:15px;color:var(--accent);text-align:center;line-height:1.25}
+.tl-when span{font-size:10px;text-transform:uppercase;letter-spacing:.08em;opacity:.8}
+.tl-body{background:var(--bg-white);border:1px solid var(--border);border-left:none;border-radius:0 var(--radius-md) var(--radius-md) 0;padding:18px 22px}
+.tl-body h4{font-size:15.5px;margin-bottom:5px}
+.tl-body p{font-size:13.8px;color:var(--text-secondary)}
+
+/* ===== NÃO INCLUSO ===== */
+.excl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.excl-card{background:var(--bg-white);border:1px solid var(--border);border-left:4px solid #C93B48;border-radius:var(--radius-sm);padding:20px}
+.excl-card h4{font-size:15px;margin-bottom:6px}
+.excl-card p{font-size:13.8px;color:var(--text-secondary)}
+
+/* ===== FAQ ===== */
+.faq-list{max-width:800px;margin:0 auto}
+.faq-item{background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius-md);margin-bottom:11px;overflow:hidden;box-shadow:var(--shadow-sm)}
+.faq-question{padding:19px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;font-weight:600;font-size:15px;color:var(--primary);transition:background .3s}
+.faq-question:hover{background:var(--primary-ultra-light)}
+.faq-question::after{content:'+';font-size:22px;color:var(--accent);transition:transform .3s;flex-shrink:0}
+.faq-item.active .faq-question::after{transform:rotate(45deg)}
+.faq-answer{padding:0 24px;max-height:0;overflow:hidden;transition:all .35s;color:var(--text-secondary);font-size:14.3px}
+.faq-item.active .faq-answer{padding:0 24px 21px;max-height:520px}
+
+/* ===== CTA ===== */
+.cta-section{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);color:#fff;text-align:center;padding:86px 0;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 78% 22%,rgba(212,168,67,.17),transparent 52%)}
+.cta-section .container{position:relative;z-index:1}
+.cta-section h2{color:#fff;font-size:clamp(25px,4vw,34px);margin-bottom:15px}
+.cta-section p{color:rgba(255,255,255,.85);font-size:16px;max-width:580px;margin:0 auto 28px}
+.validity-box{display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:12px 24px;border-radius:var(--radius-sm);margin-bottom:28px;font-size:14px}
+.validity-box strong{color:var(--accent)}
+
+footer{background:var(--primary-dark);color:rgba(255,255,255,.7);text-align:center;padding:34px 0;font-size:13.3px}
+footer p{margin-bottom:6px}
+footer strong{color:var(--accent)}
+footer a{color:rgba(255,255,255,.7)}
+footer a:hover{color:var(--accent)}
+
+/* ===== RESPONSIVO ===== */
+@media(max-width:900px){.nav-links{display:none}}
+@media(max-width:640px){
+section{padding:54px 0}
+.hero{padding:56px 0 48px}
+.info-bar .container{gap:14px;font-size:12.5px}
+.service-head,.service-body,.service-foot{padding:24px 20px}
+.step{grid-template-columns:1fr}
+.step-num{flex-direction:row;gap:8px;padding:11px}
+.tl-item{grid-template-columns:1fr}
+.tl-when{border-radius:var(--radius-md) var(--radius-md) 0 0;flex-direction:row;gap:8px;padding:11px}
+.tl-body{border-left:1px solid var(--border);border-radius:0 0 var(--radius-md) var(--radius-md)}
+.hero-buttons .btn{width:100%}
+.tabs-nav{flex-direction:column}
+.tab-btn{width:100%;justify-content:space-between}
+.price-card{padding:32px 22px}
+.service-foot{flex-direction:column;align-items:stretch}
+.service-foot .btn{width:100%}
+}
+@media print{
+header,.header-cta,.hero-buttons,.btn,.tabs-nav{display:none!important}
+.tab-panel{display:block!important;margin-bottom:32px}
+.faq-answer{max-height:none!important;padding:0 24px 21px!important}
+section{padding:28px 0;page-break-inside:avoid}
+.hero,.cta-section{background:var(--primary)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="container">
+    <a href="https://mocamidias.com.br/" class="logo">Moca<span>Mídias</span></a>
+    <nav class="nav-links">
+      <a href="#contexto">Contexto</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#investimento">Investimento</a>
+      <a href="#cronograma">Cronograma</a>
+      <a href="#faq">Dúvidas</a>
+    </nav>
+    <a href="https://wa.me/5531993363606?text=Ol%C3%A1%20Rafael%2C%20sou%20a%20Rosa%20da%20Vamos%20Viagens%20e%20quero%20falar%20sobre%20a%20proposta" class="header-cta" target="_blank" rel="noopener">Falar agora</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-meta">
+      <span>📅 Emitida em 14/09/2026</span>
+      <span>⏳ Válida por 30 dias</span>
+      <span>👤 Para: Rosa Lima · Vamos Viagens</span>
+    </div>
+    <h1>Criar uma estrutuera para <em>Vamos Viagens</em> captar mais clientes</h1>
+    <p>Uma estrutura completa de presença digital: um site encontrável no Google e nas ferramentas de inteligência artificial, somado a tráfego pago com funil de vendas para gerar demanda qualificada de forma previsível.</p>
+    <div class="hero-buttons">
+      <a href="#servicos" class="btn btn-primary">Ver os 3 serviços em detalhe</a>
+      <a href="#investimento" class="btn btn-secondary">Ir para o investimento</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INFO BAR ============ -->
+<div class="info-bar">
+  <div class="container">
+    <span>📅 Data de emissão: 14/09/2026</span>
+    <span>✅ Validade: 30 dias (até 14/10/2026)</span>
+  </div>
+</div>
+
+<!-- ============ CONTEXTO ============ -->
+<section id="contexto">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Entendendo o seu momento</span>
+      <h2>O que conversamos na nossa reunião</h2>
+      <p>A Vamos Viagens já tem audiência e movimento no Instagram. O gargalo não é atenção — é <strong>infraestrutura</strong> para capturar e converter essa atenção em vendas.</p>
+    </div>
+    <div class="context-grid">
+      <div class="context-card">
+        <div class="ic">✈️</div>
+        <h3>Seu negócio</h3>
+        <p>Agência de viagens com atuação ativa no Instagram <strong>@vamos.viagens</strong>, oferecendo pacotes, roteiros e assessoria de viagem. O relacionamento com o cliente já funciona — falta escala.</p>
+      </div>
+      <div class="context-card">
+        <div class="ic">📍</div>
+        <h3>Situação atual</h3>
+        <p>Toda a operação depende do Instagram. Sem site próprio, a Vamos Viagens não aparece para quem pesquisa "pacote para [destino]" no Google ou pede recomendação a um assistente de IA.</p>
+      </div>
+      <div class="context-card">
+        <div class="ic">🎯</div>
+        <h3>O objetivo</h3>
+        <p>Ter um ativo digital próprio, encontrável e profissional, e ligar a ele uma fonte previsível de novos orçamentos qualificados todos os meses.</p>
+      </div>
+    </div>
+
+    <div class="notice" style="max-width:860px;margin:32px auto 0">
+      <strong>Por que a ordem importa:</strong> investir em tráfego pago antes de existir um destino próprio para onde levar as pessoas é como abrir a torneira sem ter o balde embaixo. Por isso esta proposta apresenta os serviços separadamente — e também combinados em pacotes que respeitam essa sequência lógica.
+    </div>
+  </div>
+</section>
+
+<!-- ============ AUTORIDADE ============ -->
+<section class="bg-alt">
+  <div class="container">
+    <div class="authority">
+      <div class="authority-badge">★</div>
+      <div>
+        <h3>Quem executa — Rafael M. Carvalho · Moca Mídias</h3>
+        <p>Boutique de marketing digital de Belo Horizonte especializada em tráfego pago, performance e desenvolvimento web orientado a conversão. Atuação direta e sem intermediários: quem conversa com você é quem executa o projeto.</p>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>12+</b><span>anos em marketing digital</span></div>
+      <div class="stat"><b>7+</b><span>lançamentos pagos geridos</span></div>
+      <div class="stat"><b>+R$ 3 mi</b><span>faturados em lançamentos</span></div>
+      <div class="stat"><b>40+</b><span>segmentos atendidos</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVIÇOS (ABAS) ============ -->
+<section id="servicos">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Escopo detalhado</span>
+      <h2>Os serviços apresentados</h2>
+      <p>Clique em cada serviço abaixo para ver exatamente o que está incluso, como é executado e em quanto tempo é entregue. Todos podem ser contratados de forma independente.</p>
+    </div>
+
+    <div class="tabs-nav" role="tablist">
+      <button class="tab-btn active" data-tab="s1" role="tab">🌐 Site página única <span class="tab-price">R$ 2.000</span></button>
+      <button class="tab-btn" data-tab="s2" role="tab">📝 Site com gestão de conteúdo <span class="tab-price">R$ 4.000</span></button>
+      <button class="tab-btn" data-tab="s3" role="tab">🚀 Gestão de tráfego <span class="tab-price">R$ 1.600/mês</span></button>
+    </div>
+
+    <!-- ---------- SERVIÇO 1 ---------- -->
+    <div class="tab-panel active" id="s1" role="tabpanel">
+      <div class="service-card">
+        <div class="service-head">
+          <span class="tagline">Serviço 01 · Projeto pontual</span>
+          <h3>Criação de site — página única (One Page)</h3>
+          <p>Um site institucional de página única, rápido, responsivo e construído desde a base para ser <strong>encontrado no Google e citado pelas ferramentas de inteligência artificial</strong>. Ideal como primeiro ativo digital próprio da Vamos Viagens.</p>
+          <div class="service-facts">
+            <div><b>R$ 2.000</b>projeto único</div>
+            <div><b>10 a 15</b>dias úteis</div>
+            <div><b>1 página</b>estrutura em seções</div>
+            <div><b>2 rodadas</b>de ajustes inclusas</div>
+          </div>
+        </div>
+        <div class="service-body">
+
+          <div class="block">
+            <h4 class="block-title">O que está incluso</h4>
+            <ul class="check-list">
+              <li><strong>Layout exclusivo</strong> desenhado para a identidade da Vamos Viagens (não é template genérico)</li>
+              <li><strong>Estrutura em seções:</strong> topo com proposta de valor, destinos/pacotes, como funciona, sobre, depoimentos, FAQ e contato</li>
+              <li><strong>100% responsivo</strong> — testado em celular, tablet e desktop</li>
+              <li><strong>Formulário de orçamento</strong> com envio para e-mail e/ou WhatsApp</li>
+              <li><strong>Botão flutuante de WhatsApp</strong> em todas as seções</li>
+              <li><strong>Integração com o Instagram</strong> e demais redes sociais</li>
+              <li><strong>Otimização de performance:</strong> compressão de imagens, lazy loading e cache</li>
+              <li><strong>Certificado SSL</strong> (https) configurado</li>
+              <li><strong>Google Analytics 4</strong> e Search Console instalados e verificados</li>
+              <li><strong>Pixel do Meta</strong> instalado (pronto para tráfego no futuro)</li>
+              <li><strong>Sitemap.xml e robots.txt</strong> configurados e submetidos</li>
+            </ul>
+          </div>
+
+          <div class="block">
+            <h4 class="block-title">Boas práticas de indexação — Google e ferramentas de IA</h4>
+            <p style="font-size:14.5px;color:var(--text-secondary);margin-bottom:16px">Este é o diferencial técnico do serviço. Não basta o site "estar no ar" — ele precisa ser <em>legível para máquinas</em>. Buscadores e assistentes de IA (ChatGPT, Gemini, Perplexity, Copilot) leem sites de formas específicas, e aplico as práticas que garantem essa leitura:</p>
+            <ul class="check-list">
+              <li><strong>HTML semântico</strong> — hierarquia correta de títulos (H1 único, H2, H3) que descreve a página para os robôs</li>
+              <li><strong>Dados estruturados Schema.org</strong> — marcação de <code>TravelAgency</code>, <code>LocalBusiness</code>, <code>Service</code> e <code>FAQPage</code>, que é o que permite ao Google e às IAs entenderem que você é uma agência de viagens, onde atua e o que oferece</li>
+              <li><strong>Meta tags otimizadas</strong> — title e description escritos com intenção de busca real (ex: "pacotes de viagem para [destino]")</li>
+              <li><strong>Open Graph e Twitter Cards</strong> — para que o link compartilhado no WhatsApp e nas redes apareça com imagem e texto corretos</li>
+              <li><strong>Core Web Vitals</strong> — otimização de LCP, CLS e INP, hoje fatores diretos de ranqueamento</li>
+              <li><strong>Conteúdo em texto real</strong> — informações críticas nunca embutidas apenas em imagens, porque IAs não leem imagem como leem texto</li>
+              <li><strong>Estrutura de perguntas e respostas</strong> — formato que os assistentes de IA priorizam ao buscar fontes para responder usuários</li>
+              <li><strong>llms.txt</strong> — arquivo que orienta modelos de linguagem sobre o conteúdo do site (prática emergente de 2026)</li>
+              <li><strong>NAP consistente</strong> — nome, endereço e telefone padronizados, essencial para busca local</li>
+              <li><strong>URLs limpas e canonical tags</strong> — evita conteúdo duplicado</li>
+            </ul>
+            <div class="notice">
+              <strong>Importante ser transparente:</strong> a otimização técnica garante que o site esteja <em>apto</em> a ranquear e a ser citado — é a condição necessária. Posição no Google depende também de tempo, concorrência e produção contínua de conteúdo, que não estão neste escopo pontual. O que entrego é a fundação técnica correta, sem os erros que impedem a indexação.
+            </div>
+          </div>
+
+          <div class="block">
+            <h4 class="block-title">Como o projeto é executado</h4>
+
+            <div class="step">
+              <div class="step-num"><b>1</b><span>Etapa</span></div>
+              <div class="step-body">
+                <h4>Briefing e planejamento estratégico</h4>
+                <p>Reunião para levantar destinos prioritários, público-alvo, diferenciais e referências visuais. Definimos juntos a arquitetura das seções e as palavras-chave que o site vai atacar.</p>
+                <div class="tags"><span class="tag">Reunião de briefing</span><span class="tag">Pesquisa de palavras-chave</span><span class="tag">Análise de concorrentes</span></div>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-num"><b>2</b><span>Etapa</span></div>
+              <div class="step-body">
+                <h4>Wireframe e aprovação do layout</h4>
+                <p>Apresento o esqueleto de todas as seções e, em seguida, o layout visual. Você aprova antes de qualquer linha de código ser escrita — evitando retrabalho.</p>
+                <div class="tags"><span class="tag">Wireframe</span><span class="tag">Layout visual</span><span class="tag">Aprovação formal</span></div>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-num"><b>3</b><span>Etapa</span></div>
+              <div class="step-body">
+                <h4>Desenvolvimento e otimização técnica</h4>
+                <p>Construção da página com HTML semântico, aplicação dos dados estruturados, otimização de imagens e performance, configuração do formulário e integrações.</p>
+                <div class="tags"><span class="tag">Desenvolvimento</span><span class="tag">Schema.org</span><span class="tag">Performance</span><span class="tag">Responsivo</span></div>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-num"><b>4</b><span>Etapa</span></div>
+              <div class="step-body">
+                <h4>Testes, revisão e ajustes</h4>
+                <p>Validação em múltiplos dispositivos e navegadores, teste do formulário, verificação de velocidade e das marcações estruturadas. Aqui entram as 2 rodadas de ajustes inclusas.</p>
+                <div class="tags"><span class="tag">Cross-browser</span><span class="tag">Teste mobile</span><span class="tag">2 rodadas de ajuste</span></div>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-num"><b>5</b><span>Etapa</span></div>
+              <div class="step-body">
+                <h4>Publicação e entrega de acessos</h4>
+                <p>Site no ar, sitemap submetido ao Search Console, analytics validado. Entrego todos os acessos em seu nome — o ativo é 100% seu.</p>
+                <div class="tags"><span class="tag">Go live</span><span class="tag">Search Console</span><span class="tag">Handover de acessos</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="service-foot">
+          <div class="val">R$ 2.000,00<small>Projeto único · 50% início + 50% na entrega</small></div>
+          <a href="https://wa.me/5531993363606?text=Ol%C3%A1%20Rafael%2C%20quero%20avan%C3%A7ar%20com%20o%20site%20p%C3%A1gina%20%C3%BAnica" class="btn btn-primary" target="_blank" rel="noopener">Quero este serviço</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ---------- SERVIÇO 2 ---------- -->
+    <div class="tab-panel" id="s2" role="tabpanel">
+      <div class="service-card">
+        <div class="service-head">
+          <span class="tagline">Serviço 02 · Projeto pontual</span>
+          <h3>Criação de site com área de gestão de conteúdo</h3>
+          <p>Um site completo em <strong>WordPress</strong>, com múltiplas páginas e painel administrativo para que você mesma publique pacotes, roteiros e artigos — <strong>sem depender de mim e sem saber programar</strong>. É a escolha certa quando a estratégia envolve produzir conteúdo para crescer no Google.</p>
+          <div class="service-facts">
+            <div><b>R$ 4.000</b>projeto único</div>
+            <div><b>25 a 35</b>dias úteis</div>
+            <div><b>5 a 8</b>páginas + blog</div>
+            <div><b>3 rodadas</b>de ajustes inclusas</div>
+          </div>
+        </div>
+        <div class="service-body">
+
+          <div class="block">
+            <h4 class="block-title">Tudo do Serviço 01, mais:</h4>
+            <ul class="check-list">
+              <li><strong>WordPress instalado e configurado</strong> — a plataforma mais usada no mundo, sem aprisionamento tecnológico</li>
+              <li><strong>Painel administrativo em português</strong> para você gerenciar tudo sozinha</li>
+              <li><strong>Estrutura de múltiplas páginas:</strong> Home, Destinos, Pacotes, Sobre, Blog, Contato e Política de Privacidade</li>
+              <li><strong>Editor visual por blocos</strong> — monta e edita páginas arrastando elementos, como no Canva</li>
+              <li><strong>Cadastro de pacotes de viagem</strong> em formato estruturado e reutilizável (destino, período, valor, inclusos, galeria)</li>
+              <li><strong>Blog completo</strong> com categorias e tags — o motor do crescimento orgânico</li>
+              <li><strong>Sistema de busca interna</strong> e filtros por destino</li>
+              <li><strong>Galeria de fotos</strong> por destino, com otimização automática de imagens</li>
+              <li><strong>Múltiplos formulários</strong> — orçamento, contato e captura de e-mails para newsletter</li>
+              <li><strong>Plugin de SEO configurado</strong> (Rank Math ou Yoast) com treinamento de uso</li>
+              <li><strong>Backup automático</strong> diário configurado</li>
+              <li><strong>Camada de segurança</strong> — firewall, proteção de login e monitoramento</li>
+              <li><strong>Área de depoimentos</strong> gerenciável de clientes</li>
+              <li><strong>LGPD:</strong> banner de cookies e política de privacidade</li>
+              <li><strong>Treinamento em vídeo (60–90 min)</strong> gravado e seu para sempre: como publicar pacote, escrever no blog, trocar imagens e editar textos</li>
+              <li><strong>30 dias de suporte técnico</strong> pós-entrega para dúvidas de uso</li>
+            </ul>
+          </div>
+
+          <div class="block">
+            <h4 class="block-title">Site única página × Site com gestão de conteúdo</h4>
+            <div class="table-wrap">
+              <table class="deliver-table">
+                <thead>
+                  <tr><th>Critério</th><th>Página única — R$ 2.000</th><th>Com gestão — R$ 4.000</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>Páginas</strong></td><td>1 página em seções</td><td>5 a 8 páginas + blog ilimitado</td></tr>
+                  <tr><td><strong>Você edita sozinha?</strong></td><td>Não — alterações via desenvolvedor</td><td>Sim — painel completo em português</td></tr>
+                  <tr><td><strong>Blog</strong></td><td>Não incluso</td><td>Incluso e ilimitado</td></tr>
+                  <tr><td><strong>Cadastro de pacotes</strong></td><td>Estático (fixo no código)</td><td>Dinâmico e gerenciável por você</td></tr>
+                  <tr><td><strong>Potencial de SEO</strong></td><td>Bom para marca e nome próprio</td><td>Alto — cresce a cada conteúdo publicado</td></tr>
+                  <tr><td><strong>Escalabilidade</strong></td><td>Limitada</td><td>Alta — cresce junto com o negócio</td></tr>
+                  <tr><td><strong>Prazo</strong></td><td>10 a 15 dias úteis</td><td>25 a 35 dias úteis</td></tr>
+                  <tr><td><strong>Melhor para</strong></td><td>Validar presença digital com investimento menor</td><td>Estratégia de longo prazo com conteúdo</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="notice">
+              <strong>Minha recomendação para a Vamos Viagens:</strong> turismo é um dos segmentos onde conteúdo vende mais. Quem pesquisa "o que fazer em [destino]" ou "melhor época para viajar para [destino]" está a poucos passos de comprar um pacote. O blog transforma essa busca em orçamento — e isso só existe na opção com gestão de conteúdo.
+            </div>
+          </div>
+
+          <div class="block">
+            <h4 class="block-title">Como o projeto é executado</h4>
+
+            <div class="step">
+              <div class="step-num"><b>1</b><span>Etapa</span></div>
+              <div class="step-body">
+                <h4>Briefing estratégico e arquitetura da informação</h4>
+                <p>Definimos o mapa completo do site, a estrutura de destinos e pacotes e o plano de palavras-chave por página. Esta é a etapa que determina o desempenho futuro no Google.</p>
+                <div class="tags"><span class="tag">Sitemap estratégico</span><span class="tag">Pesquisa de palavras-chave</span><span class="tag">Plano de conteúdo</span></div>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-num"><b>2</b><span>Etapa</span></div>
+              <div class="step-body">
+                <h4>Design das páginas-chave</h4>
+                <p>Layout da Home, do template de Destino, do template de Pacote e do artigo de blog. Aprovados esses quatro, as demais páginas seguem o mesmo sistema visual.</p>
+                <div class="tags"><span class="tag">Design system</span><span class="tag">Templates</span><span class="tag">Aprovação</span></div>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-num"><b>3</b><span>Etapa</span></div>
+              <div class="step-body">
+                <h4>Desenvolvimento em WordPress</h4>
+                <p>Instalação, configuração do tema, criação dos tipos de conteúdo personalizados (destinos, pacotes, depoimentos), formulários e integrações.</p>
+                <div class="tags"><span class="tag">WordPress</span><span class="tag">Custom Post Types</span><span class="tag">Formulários</span></div>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-num"><b>4</b><span>Etapa</span></div>
+              <div class="step-body">
+                <h4>Otimização técnica, SEO e segurança</h4>
+                <p>Dados estruturados, plugin de SEO, cache e CDN, compressão de imagens, backup automático e camada de segurança. Todas as práticas de indexação do Serviço 01 aplicadas página por página.</p>
+                <div class="tags"><span class="tag">Schema.org</span><span class="tag">Core Web Vitals</span><span class="tag">Backup</span><span class="tag">Segurança</span></div>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-num"><b>5</b><span>Etapa</span></div>
+              <div class="step-body">
+                <h4>Migração de conteúdo e povoamento inicial</h4>
+                <p>Publico junto com você os primeiros destinos e pacotes, para que o site não vá ao ar vazio — e para que você aprenda o processo praticando no seu próprio conteúdo.</p>
+                <div class="tags"><span class="tag">Conteúdo inicial</span><span class="tag">Prática guiada</span></div>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-num"><b>6</b><span>Etapa</span></div>
+              <div class="step-body">
+                <h4>Treinamento, publicação e 30 dias de suporte</h4>
+                <p>Sessão de treinamento gravada, site publicado, sitemap submetido ao Search Console e um mês de suporte para qualquer dúvida de operação do painel.</p>
+                <div class="tags"><span class="tag">Treinamento gravado</span><span class="tag">Go live</span><span class="tag">Suporte 30 dias</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="service-foot">
+          <div class="val">R$ 4.000,00<small>Projeto único · 40% início + 30% aprovação do layout + 30% entrega</small></div>
+          <a href="https://wa.me/5531993363606?text=Ol%C3%A1%20Rafael%2C%20quero%20avan%C3%A7ar%20com%20o%20site%20com%20gest%C3%A3o%20de%20conte%C3%BAdo" class="btn btn-primary" target="_blank" rel="noopener">Quero este serviço</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ---------- SERVIÇO 3 ---------- -->
+    <div class="tab-panel" id="s3" role="tabpanel">
+      <div class="service-card">
+        <div class="service-head">
+          <span class="tagline">Serviço 03 · Recorrente mensal</span>
+          <h3>Gestão de tráfego pago com funil de vendas e peças gráficas</h3>
+          <p>Gestão profissional e contínua dos anúncios da Vamos Viagens, com <strong>estruturação de funil de vendas completo</strong> e <strong>criação das peças gráficas inclusa</strong>. O objetivo é transformar investimento em anúncio em um fluxo previsível de orçamentos qualificados.</p>
+          <div class="service-facts">
+            <div><b>R$ 1.600</b>por mês</div>
+            <div><b>Meta + Google</b>plataformas</div>
+            <div><b>Peças gráficas</b>inclusas</div>
+            <div><b>3 meses</b>compromisso mínimo</div>
+          </div>
+        </div>
+        <div class="service-body">
+
+          <div class="block">
+            <h4 class="block-title">O que está incluso todos os meses</h4>
+            <ul class="check-list">
+              <li><strong>Estratégia e planejamento mensal</strong> de campanhas alinhado à sazonalidade do turismo (alta temporada, feriados, férias)</li>
+              <li><strong>Criação e gestão de campanhas</strong> no Meta Ads (Instagram e Facebook) e Google Ads</li>
+              <li><strong>Estruturação completa do funil de vendas</strong> em 4 etapas — detalhado abaixo</li>
+              <li><strong>Criação de peças gráficas</strong> — estáticos e carrosséis para os anúncios (volume conforme necessidade das campanhas)</li>
+              <li><strong>Redação de todos os anúncios</strong> — títulos, textos e chamadas para ação</li>
+              <li><strong>Configuração e manutenção de rastreamento</strong> — Pixel do Meta, API de Conversões, GA4 e tags do Google</li>
+              <li><strong>Segmentação e construção de públicos</strong> — interesse em viagem, lookalikes, remarketing e listas de clientes</li>
+              <li><strong>Testes A/B contínuos</strong> de criativo, texto e público</li>
+              <li><strong>Otimização semanal</strong> de orçamento, lances e distribuição entre campanhas</li>
+              <li><strong>Campanhas de mensagem (WhatsApp/Direct)</strong> — formato de maior conversão para agências de viagem</li>
+              <li><strong>Remarketing estruturado</strong> para quem visitou o site ou interagiu e não fechou</li>
+              <li><strong>Relatório mensal de resultados</strong> em dashboard, com leitura clara dos números</li>
+              <li><strong>Reunião mensal de alinhamento</strong> (1h) para revisar resultados e definir o próximo ciclo</li>
+              <li><strong>Canal direto de comunicação</strong> no WhatsApp em dias úteis</li>
+              <li><strong>Monitoramento de saúde da conta</strong> — políticas do Meta, avisos e prevenção de bloqueios</li>
+            </ul>
+          </div>
+
+          <div class="block">
+            <h4 class="block-title">O funil de vendas que será construído</h4>
+            <p style="font-size:14.5px;color:var(--text-secondary);margin-bottom:16px">Viagem é decisão de alto valor e ciclo longo. Ninguém compra um pacote de R$ 6.000 no primeiro contato com um anúncio. Por isso o funil trabalha em temperaturas diferentes, cada uma com objetivo, criativo e mensagem próprios:</p>
+
+            <div class="step">
+              <div class="step-num"><b>1</b><span>Topo</span></div>
+              <div class="step-body">
+                <h4>Descoberta — atrair quem sonha em viajar</h4>
+                <p>Conteúdo inspiracional sobre destinos para público frio: quem tem interesse em viagem mas ainda não conhece a Vamos Viagens. Objetivo: gerar reconhecimento e alimentar as etapas seguintes com público engajado.</p>
+                <div class="tags"><span class="tag">Público frio</span><span class="tag">Alcance e vídeo view</span><span class="tag">Inspiração de destino</span></div>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-num"><b>2</b><span>Meio</span></div>
+              <div class="step-body">
+                <h4>Consideração — converter interesse em conversa</h4>
+                <p>Para quem interagiu ou visitou o site: prova social, depoimentos de viajantes, diferenciais do atendimento e pacotes com condições. Objetivo: iniciar conversa no WhatsApp ou capturar o contato.</p>
+                <div class="tags"><span class="tag">Retargeting</span><span class="tag">Campanha de mensagem</span><span class="tag">Prova social</span><span class="tag">Captura de lead</span></div>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-num"><b>3</b><span>Fundo</span></div>
+              <div class="step-body">
+                <h4>Decisão — fechar quem já está quase</h4>
+                <p>Para quem pediu orçamento e não fechou, ou abandonou a conversa: urgência real (últimas vagas, prazo de tarifa), condições de pagamento e reforço de segurança na compra.</p>
+                <div class="tags"><span class="tag">Público quente</span><span class="tag">Urgência</span><span class="tag">Recuperação de orçamento</span></div>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-num"><b>4</b><span>Pós</span></div>
+              <div class="step-body">
+                <h4>Recompra e indicação</h4>
+                <p>Campanhas para a base de clientes que já viajou: novos destinos, programa de indicação e ofertas exclusivas. É o público de menor custo de aquisição e maior taxa de fechamento.</p>
+                <div class="tags"><span class="tag">Base de clientes</span><span class="tag">Recompra</span><span class="tag">Indicação</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="block">
+            <h4 class="block-title">Cronograma dos primeiros 90 dias</h4>
+            <div class="table-wrap">
+              <table class="deliver-table">
+                <thead><tr><th>Período</th><th>Foco do trabalho</th><th>O que esperar</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Mês 1</strong><br>Estruturação</td><td>Onboarding, auditoria das contas, configuração de Business Manager, Pixel, API de Conversões e GA4. Primeiras peças gráficas, montagem do funil e subida das campanhas iniciais.</td><td>Estrutura no ar e coleta de dados iniciando. Primeiros resultados aparecem, mas ainda em fase de aprendizado do algoritmo.</td></tr>
+                  <tr><td><strong>Mês 2</strong><br>Otimização</td><td>Leitura dos dados do primeiro mês, corte do que não performou, escala do que funcionou. Novos criativos, testes A/B e ativação plena do remarketing.</td><td>Queda no custo por conversa e aumento no volume de orçamentos qualificados.</td></tr>
+                  <tr><td><strong>Mês 3</strong><br>Escala</td><td>Campanhas vencedoras escaladas, públicos semelhantes com base em dados reais, funil completo operando nas quatro etapas.</td><td>Previsibilidade: passa a ser possível estimar quantos orçamentos determinado investimento gera.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="notice warn">
+              <strong>Verba de mídia — atenção importante:</strong> o valor de R$ 1.600/mês corresponde exclusivamente ao meu trabalho de gestão, estratégia e criação de peças. <strong>A verba de veiculação dos anúncios é paga diretamente por você às plataformas</strong> (Meta e Google), sem qualquer intermediação ou comissão minha. Para o segmento de turismo em fase inicial, recomendo verba de <strong>R$ 1.500 a R$ 3.000/mês</strong> para gerar volume de dados suficiente para otimização. Esse valor é definido por você e pode ser ajustado a qualquer momento.
+            </div>
+          </div>
+
+          <div class="block">
+            <h4 class="block-title">O que NÃO está incluso neste serviço</h4>
+            <div class="excl-grid">
+              <div class="excl-card"><h4>Captação de vídeo</h4><p>Gravação em locação, com equipamento ou equipe, não faz parte do escopo.</p></div>
+              <div class="excl-card"><h4>Edição de vídeo</h4><p>Edição de reels, VSL ou vídeos para anúncio não está inclusa. Posso orientar tecnicamente o que precisa ser gravado.</p></div>
+              <div class="excl-card"><h4>Verba de mídia</h4><p>Paga diretamente às plataformas, sem intermediação.</p></div>
+              <div class="excl-card"><h4>Gestão de redes sociais</h4><p>Postagens orgânicas, stories e resposta a comentários e directs não fazem parte do escopo.</p></div>
+              <div class="excl-card"><h4>Atendimento aos leads</h4><p>A conversa no WhatsApp e o fechamento da venda seguem sendo da equipe da Vamos Viagens.</p></div>
+              <div class="excl-card"><h4>Produção de fotos</h4><p>Fotografia própria não inclusa. Utilizo imagens fornecidas por você ou bancos de imagem.</p></div>
+            </div>
+          </div>
+
+        </div>
+        <div class="service-foot">
+          <div class="val">R$ 1.600,00<small>Por mês · compromisso mínimo de 3 meses · verba de mídia à parte</small></div>
+          <a href="https://wa.me/5531993363606?text=Ol%C3%A1%20Rafael%2C%20quero%20avan%C3%A7ar%20com%20a%20gest%C3%A3o%20de%20tr%C3%A1fego" class="btn btn-primary" target="_blank" rel="noopener">Quero este serviço</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ INVESTIMENTO ============ -->
+<section class="bg-alt" id="investimento">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Investimento</span>
+      <h2>Resumo dos valores e pacotes</h2>
+      <p>Cada serviço pode ser contratado isoladamente. Abaixo, também três combinações pensadas para o momento da Vamos Viagens, com condição especial na contratação conjunta.</p>
+    </div>
+
+    <div class="table-wrap" style="max-width:900px;margin:0 auto 52px;background:var(--bg-white)">
+      <table class="deliver-table">
+        <thead><tr><th>Serviço</th><th>Modalidade</th><th>Prazo</th><th>Investimento</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Criação de site — página única</strong></td><td>Projeto pontual</td><td>10 a 15 dias úteis</td><td><strong>R$ 2.000,00</strong></td></tr>
+          <tr><td><strong>Criação de site com gestão de conteúdo</strong></td><td>Projeto pontual</td><td>25 a 35 dias úteis</td><td><strong>R$ 4.000,00</strong></td></tr>
+          <tr><td><strong>Gestão de tráfego com funil e peças gráficas</strong></td><td>Recorrente mensal</td><td>Contínuo (mín. 3 meses)</td><td><strong>R$ 1.600,00/mês</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="label">Pacote 1 · Entrada</div>
+        <h3>Presença Digital Essencial</h3>
+        <div class="price">R$ 3.400<small> /à vista</small></div>
+        <div class="price-old">De R$ 3.600 · economia de R$ 200</div>
+        <ul>
+          <li>Site página única otimizado</li>
+          <li>1º mês de gestão de tráfego</li>
+          <li>Funil de vendas estruturado</li>
+          <li>Peças gráficas inclusas</li>
+          <li>Rastreamento completo instalado</li>
+          <li>Continuidade do tráfego: R$ 1.600/mês</li>
+        </ul>
+        <a href="https://wa.me/5531993363606?text=Ol%C3%A1%20Rafael%2C%20quero%20o%20pacote%20Presen%C3%A7a%20Digital%20Essencial" class="btn btn-primary btn-block" target="_blank" rel="noopener">Contratar pacote 1</a>
+      </div>
+
+      <div class="price-card featured">
+        <div class="label">Pacote 2 · Mais equilibrado</div>
+        <h3>Crescimento Completo</h3>
+        <div class="price">R$ 5.200<small> /à vista</small></div>
+        <div class="price-old">De R$ 5.600 · economia de R$ 400</div>
+        <ul>
+          <li>Site com gestão de conteúdo (WordPress)</li>
+          <li>Blog completo para crescer no Google</li>
+          <li>1º mês de gestão de tráfego</li>
+          <li>Funil de vendas em 4 etapas</li>
+          <li>Peças gráficas inclusas</li>
+          <li>Treinamento gravado do painel</li>
+          <li>Continuidade do tráfego: R$ 1.600/mês</li>
+        </ul>
+        <a href="https://wa.me/5531993363606?text=Ol%C3%A1%20Rafael%2C%20quero%20o%20pacote%20Crescimento%20Completo" class="btn btn-primary btn-block" target="_blank" rel="noopener">Contratar pacote 2</a>
+      </div>
+
+      <div class="price-card">
+        <div class="label">Pacote 3 · Trimestre completo</div>
+        <h3>Aceleração 90 Dias</h3>
+        <div class="price">R$ 8.000<small> /à vista</small></div>
+        <div class="price-old">De R$ 8.800 · economia de R$ 800</div>
+        <ul>
+          <li>Site com gestão de conteúdo (WordPress)</li>
+          <li>Blog completo para crescer no Google</li>
+          <li><strong>3 meses de gestão de tráfego</strong></li>
+          <li>Funil de vendas em 4 etapas</li>
+          <li>Peças gráficas inclusas</li>
+          <li>Ciclo completo de estruturação, otimização e escala</li>
+          <li>3 reuniões mensais de alinhamento</li>
+          <li>Treinamento gravado do painel</li>
+        </ul>
+        <a href="https://wa.me/5531993363606?text=Ol%C3%A1%20Rafael%2C%20quero%20o%20pacote%20Acelera%C3%A7%C3%A3o%2090%20Dias" class="btn btn-primary btn-block" target="_blank" rel="noopener">Contratar pacote 3</a>
+      </div>
+    </div>
+
+    <div class="benchmark-note">
+      <strong>Condições de pagamento:</strong> projetos pontuais podem ser parcelados em até 3× sem juros, com a primeira parcela no início e a última na entrega. O serviço recorrente é faturado mensalmente, com vencimento no mesmo dia de cada mês.<br><br>
+      <strong>Custos declarados que não passam por mim:</strong> domínio (aprox. R$ 40/ano), hospedagem do site (aprox. R$ 30 a R$ 90/mês) e verba de mídia dos anúncios — todos pagos diretamente aos respectivos fornecedores, sem comissão ou intermediação.
+    </div>
+  </div>
+</section>
+
+<!-- ============ CRONOGRAMA GERAL ============ -->
+<section id="cronograma">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Sequência recomendada</span>
+      <h2>Como eu organizaria a implementação</h2>
+      <p>Considerando o pacote Aceleração 90 Dias, esta é a ordem que gera resultado mais rápido sem sobrecarregar sua rotina.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-when"><b>Semana 1</b><span>Início</span></div>
+        <div class="tl-body">
+          <h4>Onboarding e briefing</h4>
+          <p>Reunião de kickoff, acesso às contas, definição de palavras-chave e coleta de materiais (logo, fotos, textos de pacotes). Configuração de Business Manager, Pixel e GA4 para começar a coletar dados desde já.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-when"><b>Semanas 2–3</b><span>Design</span></div>
+        <div class="tl-body">
+          <h4>Layout do site e primeiras peças gráficas</h4>
+          <p>Aprovação visual das páginas-chave do site (Home, Destino, Pacote e artigo de blog) e produção do primeiro lote de criativos para os anúncios.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-when"><b>Semanas 4–6</b><span>Build</span></div>
+        <div class="tl-body">
+          <h4>Desenvolvimento do site e primeiras campanhas</h4>
+          <p>Construção do site em WordPress com toda a otimização técnica. Assim que a home estiver publicável, subimos as campanhas de topo de funil para iniciar o aprendizado do algoritmo.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-when"><b>Semanas 6–7</b><span>Conteúdo</span></div>
+        <div class="tl-body">
+          <h4>Povoamento inicial e otimização técnica final</h4>
+          <p>Publicação dos primeiros destinos e pacotes, dados estruturados aplicados página por página, testes de performance e submissão do sitemap ao Search Console.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-when"><b>Semana 8</b><span>Treino</span></div>
+        <div class="tl-body">
+          <h4>Treinamento e go live completo</h4>
+          <p>Site publicado, treinamento gravado do painel entregue e funil de tráfego completo operando nas quatro etapas, já com remarketing ativo.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-when"><b>Mês 3+</b><span>Rotina</span></div>
+        <div class="tl-body">
+          <h4>Otimização contínua e escala</h4>
+          <p>Ciclo mensal: relatório de resultados, reunião de alinhamento, novos criativos, testes e escala do que funciona. Estrutura pronta, foco 100% em performance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="bg-alt" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Dúvidas frequentes</span>
+      <h2>Perguntas e respostas</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question">Preciso contratar todos os serviços de uma vez?</div>
+        <div class="faq-answer">Não. Cada serviço funciona de forma independente e pode ser contratado isoladamente. Os pacotes existem apenas para oferecer uma condição melhor a quem opta pela contratação conjunta. Também é possível começar por um serviço e adicionar os demais depois — nesse caso, o valor praticado será o de tabela individual.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Qual das duas opções de site é a melhor para a Vamos Viagens?</div>
+        <div class="faq-answer">Se o objetivo é ter presença digital profissional com investimento inicial menor, o site de página única (R$ 2.000) resolve. Se a intenção é crescer no Google de forma consistente e ganhar autonomia para publicar pacotes e conteúdos, a versão com gestão de conteúdo (R$ 4.000) é a escolha certa — turismo é um segmento em que conteúdo gera muita busca qualificada. Minha recomendação para o seu caso é a segunda opção.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">O site realmente vai aparecer no Google e nas IAs?</div>
+        <div class="faq-answer">O site será entregue tecnicamente <em>apto</em> a ser indexado e citado: HTML semântico, dados estruturados Schema.org, meta tags otimizadas, Core Web Vitals, conteúdo em texto real, estrutura de perguntas e respostas e llms.txt. Isso remove todas as barreiras técnicas que impedem a indexação. Já a <strong>posição</strong> alcançada depende de tempo, concorrência do termo e produção contínua de conteúdo — fatores que vão além do escopo de um projeto pontual. Prefiro ser transparente nisso: entrego a fundação correta, sem prometer primeira posição.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">O que exatamente o valor de R$ 1.600/mês da gestão de tráfego cobre?</div>
+        <div class="faq-answer">Cobre integralmente o meu trabalho: estratégia, planejamento mensal, criação e gestão das campanhas, estruturação do funil, criação das peças gráficas, redação dos anúncios, configuração de rastreamento, otimizações semanais, relatório mensal e reunião de alinhamento. <strong>Não inclui a verba de veiculação dos anúncios</strong>, que você paga diretamente ao Meta e ao Google, sem qualquer comissão minha.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Quanto devo investir em verba de anúncios?</div>
+        <div class="faq-answer">Para turismo em fase inicial, recomendo entre R$ 1.500 e R$ 3.000 por mês. Abaixo disso, o volume de dados é insuficiente para o algoritmo otimizar e para tomarmos decisões com segurança. O valor é 100% definido por você e pode ser ajustado a qualquer momento, para cima ou para baixo.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Por que a gestão de tráfego tem compromisso mínimo de 3 meses?</div>
+        <div class="faq-answer">Porque o primeiro mês é de estruturação e aprendizado do algoritmo, o segundo é de otimização com base em dados reais e o terceiro é quando os resultados se estabilizam e se tornam previsíveis. Encerrar antes disso significa pagar pela estruturação e sair justamente quando o retorno começaria a aparecer. É uma questão técnica, não comercial.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Vídeos estão inclusos nos anúncios?</div>
+        <div class="faq-answer">Não. Captação e edição de vídeo estão explicitamente fora do escopo. Estão inclusas as peças gráficas estáticas e os carrosséis. Se quiser usar vídeo nas campanhas — e em turismo vídeo funciona muito bem — posso orientar tecnicamente o que gravar, e você produz internamente ou com um profissional de vídeo.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Os acessos e os dados ficam no meu nome?</div>
+        <div class="faq-answer">Sim, integralmente. Domínio, hospedagem, contas de anúncio, Business Manager, Analytics e WordPress são criados ou transferidos para o seu nome. Todos os ativos são da Vamos Viagens, e o acesso completo é entregue a você. Sem aprisionamento de qualquer tipo.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Como funciona o suporte após a entrega do site?</div>
+        <div class="faq-answer">O projeto de site com gestão de conteúdo inclui 30 dias de suporte técnico gratuito para dúvidas de uso e ajustes finos. Após esse período, é possível contratar um plano de manutenção mensal ou solicitar atendimentos pontuais. Para quem mantém a gestão de tráfego ativa, o canal de comunicação permanece aberto continuamente.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Qual a validade desta proposta?</div>
+        <div class="faq-answer">Esta proposta foi emitida em <strong>14/09/2026</strong> e é válida por <strong>30 dias</strong>, até <strong>14/10/2026</strong>. Dentro desse período, todos os valores, escopos, prazos e condições de pagamento aqui apresentados estão garantidos. Após a data de expiração, os valores podem ser revistos.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="cta-section">
+  <div class="container">
+    <span class="eyebrow eyebrow-light">Próximos passos</span>
+    <h2>Vamos colocar a Vamos Viagens no mapa digital?</h2>
+    <p>O próximo passo é simples: me diga qual caminho faz mais sentido para o momento da agência e eu preparo o contrato com o escopo escolhido. Qualquer dúvida sobre os detalhes desta proposta, estou à disposição.</p>
+    <div class="validity-box">
+      📅 Proposta emitida em <strong>14/09/2026</strong> · Válida por <strong>30 dias</strong> (até <strong>14/10/2026</strong>)
+    </div>
+    <div>
+      <a href="https://wa.me/5531993363606?text=Ol%C3%A1%20Rafael%2C%20sou%20a%20Rosa%20da%20Vamos%20Viagens%20e%20quero%20conversar%20sobre%20a%20proposta" class="btn btn-primary" target="_blank" rel="noopener">Falar com Rafael no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <p><strong>Moca Mídias</strong> · Boutique de marketing digital especializada em tráfego pago e performance</p>
+    <p>Rafael M. Carvalho · Belo Horizonte · MG</p>
+    <p>
+      <a href="https://mocamidias.com.br/gestao-de-trafego-pago-para-negocios-locais/">Tráfego local</a> ·
+      <a href="https://mocamidias.com.br/trafego-pago-para-e-commerce/">E-commerce</a> ·
+      <a href="https://mocamidias.com.br/auditoria-tecnica-de-seo/">Auditoria SEO</a> ·
+      <a href="https://mocamidias.com.br/criacao-de-sites-wordpress/">Criação de sites</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+/* ---- ABAS DE SERVIÇOS ---- */
+document.querySelectorAll('.tab-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
+    document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+    var y = document.getElementById('servicos').getBoundingClientRect().top + window.pageYOffset - 80;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  });
+});
+
+/* ---- ACCORDION FAQ ---- */
+document.querySelectorAll('.faq-question').forEach(function(q){
+  q.addEventListener('click', function(){
+    var item = q.parentElement;
+    var isActive = item.classList.contains('active');
+    document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('active'); });
+    if(!isActive) item.classList.add('active');
+  });
+});
+</script>
+
+</body>
+</html>
