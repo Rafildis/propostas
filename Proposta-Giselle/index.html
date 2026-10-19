@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposta Comercial · Giselle Dias na Segurança · Moca Mídias</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--amarelo:#F5B700;--preto:#141414;--claro:#f6f6f4;--texto:#333;--verde:#1f9d55}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Montserrat',sans-serif;color:var(--texto);background:var(--claro);line-height:1.6}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+  header{background:var(--preto);color:#fff;padding:64px 0 48px;border-bottom:8px solid var(--amarelo)}
+  header .tag{display:inline-block;background:var(--amarelo);color:var(--preto);font-weight:700;padding:4px 12px;border-radius:4px;font-size:.8rem;letter-spacing:1px}
+  header h1{font-size:2.3rem;font-weight:800;margin:16px 0 8px;line-height:1.2}
+  header h1 span{color:var(--amarelo)}
+  header p{opacity:.85}
+  .meta{display:flex;flex-wrap:wrap;gap:24px;margin-top:28px;font-size:.9rem}
+  .meta b{color:var(--amarelo);display:block;font-size:.75rem;letter-spacing:1px}
+  section{padding:56px 0;border-bottom:1px solid #e3e3e0}
+  h2{font-size:1.6rem;font-weight:800;color:var(--preto);margin-bottom:8px}
+  h2 small{display:block;font-size:.8rem;color:var(--amarelo);letter-spacing:2px;font-weight:700}
+  h3.sub{margin:36px 0 12px;color:var(--preto)}
+  .lead{margin-bottom:28px;color:#555}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .card{background:#fff;border-radius:10px;padding:22px;box-shadow:0 2px 10px rgba(0,0,0,.05);border-top:4px solid var(--amarelo)}
+  .card h3{font-size:1.05rem;color:var(--preto);margin-bottom:8px}
+  .card ul{padding-left:18px;font-size:.92rem}
+  .card li{margin-bottom:4px}
+  table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.05);font-size:.92rem}
+  th{background:var(--preto);color:#fff;text-align:left;padding:12px 14px;font-weight:600}
+  td{padding:12px 14px;border-bottom:1px solid #eee;vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  .destaque td{background:#fff8e1;font-weight:700}
+  .stat{background:var(--preto);color:#fff;border-radius:10px;padding:22px;text-align:center}
+  .stat b{display:block;font-size:2rem;color:var(--amarelo);font-weight:800}
+  .stat span{font-size:.85rem;opacity:.85}
+  .fase{display:flex;gap:18px;margin-bottom:18px}
+  .fase .n{flex:0 0 52px;height:52px;border-radius:50%;background:var(--amarelo);color:var(--preto);font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+  .fase .c{background:#fff;border-radius:10px;padding:18px 22px;flex:1;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+  .fase h3{color:var(--preto);font-size:1.05rem}
+  .fase .p{font-size:.8rem;color:#888;font-weight:600;margin-bottom:6px}
+  .preco{background:var(--preto);color:#fff;border-radius:14px;padding:36px;text-align:center;margin:24px 0;position:relative}
+  .selo{display:inline-block;background:var(--verde);color:#fff;font-weight:700;font-size:.8rem;padding:4px 14px;border-radius:20px;margin-bottom:14px;letter-spacing:1px}
+  .preco .v{font-size:3rem;font-weight:800;color:var(--amarelo);line-height:1}
+  .preco .v small{font-size:1.1rem;color:#fff}
+  .preco p{opacity:.85;margin-top:10px}
+  .pgto{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .pgto .card.top{border-top-color:var(--verde);position:relative}
+  .pgto .badge{position:absolute;top:-12px;right:16px;background:var(--verde);color:#fff;font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:12px}
+  .pgto .v{font-size:1.8rem;font-weight:800;color:var(--preto)}
+  .pgto s{color:#999;font-size:.9rem}
+  .alerta{background:#fff8e1;border-left:5px solid var(--amarelo);padding:18px 22px;border-radius:6px;margin-top:20px;font-size:.92rem}
+  .ok li::marker{content:"✔  ";color:var(--verde)}
+  .no li::marker{content:"✖  ";color:#c0392b}
+  details{background:#fff;border-radius:8px;margin-bottom:10px;padding:16px 20px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+  summary{font-weight:700;cursor:pointer;color:var(--preto)}
+  details p{margin-top:10px;font-size:.92rem}
+  footer{background:var(--preto);color:#fff;padding:48px 0;text-align:center}
+  footer h2{color:#fff}
+  footer .btn{display:inline-block;margin-top:20px;background:var(--amarelo);color:var(--preto);padding:14px 32px;border-radius:6px;font-weight:800;text-decoration:none}
+  footer .contato{margin-top:16px;font-size:.95rem}
+  footer .contato a{color:var(--amarelo);text-decoration:none;font-weight:700}
+  footer small{display:block;margin-top:24px;opacity:.6}
+  @media(max-width:600px){header h1{font-size:1.7rem}.preco .v{font-size:2.3rem}}
+  @media print{section{page-break-inside:avoid}footer .btn{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="tag">PROPOSTA COMERCIAL</span>
+    <h1>Página de Vendas + Tráfego Pago<br>para o <span>NR 35 | Multiplicador</span></h1>
+    <p>Estruturação da venda online dos cursos de Giselle Dias, começando pelo NR 35 e expandindo para todo o portfólio.</p>
+    <div class="meta">
+      <div><b>CLIENTE</b>Giselle Dias na Segurança</div>
+      <div><b>RESPONSÁVEL</b>Rafael M. Carvalho · Moca Mídias</div>
+      <div><b>DATA</b>19/10/2026</div>
+      <div><b>VALIDADE</b>03/11/2026</div>
+    </div>
+  </div>
+</header>
+
+<!-- 1. DIAGNÓSTICO -->
+<section>
+  <div class="wrap">
+    <h2><small>01 · DIAGNÓSTICO</small>Onde estamos hoje</h2>
+    <p class="lead">A Giselle tem autoridade, produto validado e público. Falta a estrutura que transforma isso em vendas previsíveis, todos os dias.</p>
+    <div class="grid" style="margin-bottom:24px">
+      <div class="stat"><b>15 anos</b><span>formando instrutores de NRs</span></div>
+      <div class="stat"><b>+120</b><span>vendas realizadas sem anúncios</span></div>
+      <div class="stat"><b>7.505</b><span>seguidores no Instagram</span></div>
+      <div class="stat"><b>5</b><span>produtos ativos na Hotmart</span></div>
+    </div>
+    <div class="grid">
+      <div class="card"><h3>✅ Pontos fortes</h3><ul>
+        <li>Referência no nicho de formação de instrutores</li>
+        <li>Produto com <b>dor legal</b>: o item 35.4.3 da NR 35 exige instrutor com proficiência comprovada</li>
+        <li>Mentoria <b>ao vivo</b>, com alto valor percebido</li>
+        <li><b>Entrada a qualquer momento</b>: o aluno começa assim que compra</li>
+        <li>Muito conteúdo em vídeo (YouTube e podcast)</li>
+      </ul></div>
+      <div class="card"><h3>⚠️ O que falta</h3><ul>
+        <li>Nenhuma campanha de tráfego pago</li>
+        <li>Página de vendas genérica da Hotmart, sem prova social nem detalhes</li>
+        <li>Sem domínio próprio</li>
+        <li>Sem rastreamento de conversões (Pixel e GA4)</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. ESTRATÉGIA -->
+<section>
+  <div class="wrap">
+    <h2><small>02 · ESTRATÉGIA</small>Validar um produto, depois escalar</h2>
+    <p class="lead">Começamos com <b>um único produto</b>, o NR 35 Multiplicador. Ele concentra a maior demanda e é o tema em que a Giselle é mais reconhecida. Como a entrada é <b>a qualquer momento</b>, as campanhas ficam <b>sempre ativas</b>, gerando vendas todos os dias sem depender de lançamentos ou datas de turma.</p>
+    <table>
+      <tr><th>Canal</th><th>Função</th><th>% da verba</th></tr>
+      <tr><td><b>Google Ads · Pesquisa</b></td><td>Aparecer para quem já procura "curso multiplicador NR 35" e "instrutor NR 35"</td><td>50%</td></tr>
+      <tr><td><b>Meta Ads · Instagram e Facebook</b></td><td>Remarketing de visitantes e públicos semelhantes aos +120 compradores</td><td>35%</td></tr>
+      <tr><td><b>YouTube Ads</b></td><td>Levar as aulas da Giselle a novos profissionais de SST</td><td>15%</td></tr>
+    </table>
+    <div class="alerta"><b>Fluxo:</b> Anúncio → Página de vendas própria (gisellediasnaseguranca.com.br) → Checkout Hotmart (R$ 597 ou 10x de R$ 59,70) → Compra rastreada → Aluno começa a mentoria imediatamente.</div>
+  </div>
+</section>
+
+<!-- 3. ENTREGAS -->
+<section>
+  <div class="wrap">
+    <h2><small>03 · ENTREGAS</small>O que está incluído</h2>
+    <p class="lead">Todos os itens abaixo estão incluídos no investimento mensal do contrato inicial.</p>
+    <div class="grid">
+      <div class="card"><h3>✍️ Copy da página de vendas</h3><ul>
+        <li>Texto persuasivo completo do NR 35</li>
+        <li>Promessa, dores, conteúdo, autoridade, depoimentos, FAQ e chamadas para compra</li>
+        <li>Destaque para a entrada imediata: "comece ainda esta semana"</li>
+        <li>Linguagem fiel ao tom da Giselle</li>
+      </ul></div>
+      <div class="card"><h3>💻 Página de vendas</h3><ul>
+        <li>Página própria, rápida e otimizada para celular</li>
+        <li>Publicada no domínio da cliente</li>
+        <li>Botões ligados ao checkout da Hotmart</li>
+        <li>Botão de WhatsApp para dúvidas</li>
+      </ul></div>
+      <div class="card"><h3>📡 Rastreamento</h3><ul>
+        <li>Pixel da Meta e API de Conversões</li>
+        <li>Google Ads e GA4</li>
+        <li>Integração com a Hotmart (início de checkout e compra)</li>
+        <li>Links com UTM para identificar a origem de cada venda</li>
+      </ul></div>
+      <div class="card"><h3>⚙️ Configuração das campanhas</h3><ul>
+        <li>Estrutura no Google Ads (pesquisa e YouTube)</li>
+        <li>Estrutura na Meta Ads (frio e remarketing)</li>
+        <li>Pesquisa de palavras-chave e públicos</li>
+        <li>Campanhas sempre ativas</li>
+      </ul></div>
+      <div class="card"><h3>🎨 Banners</h3><ul>
+        <li>Briefing e criação de <b>6 banners</b> iniciais (feed, stories e display)</li>
+        <li><b>4 banners novos por mês</b> para testes</li>
+      </ul></div>
+      <div class="card"><h3>🎬 Roteiros de vídeo</h3><ul>
+        <li><b>4 roteiros</b> iniciais para anúncios</li>
+        <li><b>2 roteiros novos por mês</b></li>
+        <li>Gravação e edição ficam com a cliente</li>
+      </ul></div>
+      <div class="card"><h3>📈 Gestão das campanhas</h3><ul>
+        <li>Acompanhamento e otimização semanal</li>
+        <li>Testes A/B de anúncios e públicos</li>
+        <li>Ajuste de verba conforme o resultado</li>
+      </ul></div>
+      <div class="card"><h3>📊 Relatório de desempenho</h3><ul>
+        <li>Relatório mensal com investimento, vendas, custo por venda (CPA) e retorno (ROAS)</li>
+        <li>Reunião mensal de alinhamento</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. CRONOGRAMA -->
+<section>
+  <div class="wrap">
+    <h2><small>04 · CRONOGRAMA</small>Como serão os 3 primeiros meses</h2>
+    <p class="lead">O prazo começa a contar a partir do envio dos acessos e materiais (veja o item 06).</p>
+    <div class="fase"><div class="n">1</div><div class="c"><div class="p">MÊS 1 · SEMANAS 1 E 2</div><h3>Briefing, copy e roteiros</h3>Reunião de briefing, registro do domínio, recebimento dos acessos, copy da página e 4 roteiros de vídeo.</div></div>
+    <div class="fase"><div class="n">2</div><div class="c"><div class="p">MÊS 1 · SEMANAS 3 E 4</div><h3>Página, rastreamento e lançamento</h3>Página no ar, Pixel, GA4 e integração com a Hotmart, 6 banners, configuração e <b>início das campanhas</b>.</div></div>
+    <div class="fase"><div class="n">3</div><div class="c"><div class="p">MÊS 2</div><h3>Aprendizado e otimização</h3>As plataformas coletam dados. Fazemos os primeiros testes de anúncios e públicos e ajustamos a página.</div></div>
+    <div class="fase"><div class="n">4</div><div class="c"><div class="p">MÊS 3</div><h3>Validação</h3>Concentramos a verba no que deu mais resultado. No relatório final do ciclo, decidimos juntos sobre a expansão.</div></div>
+  </div>
+</section>
+
+<!-- 5. INVESTIMENTO -->
+<section>
+  <div class="wrap">
+    <h2><small>05 · INVESTIMENTO</small>Contrato inicial: validação do NR 35</h2>
+
+    <div class="preco">
+      <span class="selo">SEM TAXA DE IMPLANTAÇÃO</span>
+      <div class="v">R$ 1.200<small> / mês</small></div>
+      <p>Contrato de <b>3 meses</b> · Total de R$ 3.600<br>Página, copy, configuração e rastreamento <b>inclusos</b></p>
+    </div>
+
+    <table>
+      <tr><th>Item</th><th>Valor</th></tr>
+      <tr><td>Copy, página de vendas, rastreamento e configuração das campanhas</td><td>Incluso</td></tr>
+      <tr><td>Banners (6 iniciais + 4 por mês) e roteiros (4 iniciais + 2 por mês)</td><td>Incluso</td></tr>
+      <tr><td>Gestão das campanhas e relatório mensal</td><td>Incluso</td></tr>
+      <tr class="destaque"><td>Honorário mensal Moca Mídias (meses 1, 2 e 3)</td><td>R$ 1.200 / mês</td></tr>
+    </table>
+
+    <h3 class="sub">💳 Formas de pagamento</h3>
+    <div class="pgto">
+      <div class="card">
+        <h3>Mensal</h3>
+        <div class="v">R$ 1.200<small style="font-size:.9rem">/mês</small></div>
+        <ul style="margin-top:8px">
+          <li>3 parcelas via PIX ou boleto</li>
+          <li>1ª na assinatura, demais a cada 30 dias</li>
+        </ul>
+      </div>
+      <div class="card top">
+        <span class="badge">ECONOMIZE R$ 180</span>
+        <h3>À vista</h3>
+        <s>R$ 3.600</s>
+        <div class="v">R$ 3.420</div>
+        <ul style="margin-top:8px">
+          <li>3 meses pagos de uma vez, via PIX</li>
+          <li>5% de desconto</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="sub">💰 Verba de anúncios (paga direto às plataformas)</h3>
+    <p style="margin-bottom:14px;font-size:.95rem">A verba é paga pela cliente diretamente ao Google e à Meta, com o cartão dela. Não passa pela Moca Mídias.</p>
+    <table>
+      <tr><th>Cenário</th><th>Verba mensal</th><th>Por dia</th><th>Vendas estimadas*</th></tr>
+      <tr class="destaque"><td>Mínimo recomendado</td><td>R$ 1.500</td><td>R$ 50</td><td>8 a 10</td></tr>
+      <tr><td>Ideal</td><td>R$ 2.500</td><td>R$ 83</td><td>14 a 17</td></tr>
+    </table>
+
+    <h3 class="sub">📐 Por que a conta fecha</h3>
+    <table>
+      <tr><th>Indicador</th><th>Valor</th></tr>
+      <tr><td>Preço do NR 35</td><td>R$ 597,00 (ou 10x de R$ 59,70)</td></tr>
+      <tr><td>Valor líquido por venda (após taxa da Hotmart)</td><td>≈ R$ 537</td></tr>
+      <tr><td>Custo mensal total no cenário mínimo (verba + honorário)</td><td>R$ 2.700</td></tr>
+      <tr class="destaque"><td>Vendas para empatar o investimento</td><td>≈ 5 vendas / mês</td></tr>
+      <tr><td>Meta do ciclo de validação</td><td>8 a 10 vendas / mês</td></tr>
+    </table>
+    <div class="alerta">*Estimativas com base em um custo por venda de R$ 150 a R$ 180. Os resultados dependem do mercado, da oferta e dos criativos. Os meses 1 e 2 são de aprendizado, e o custo por venda tende a cair ao longo do ciclo.</div>
+
+    <h3 class="sub">🚀 Fase de expansão (a partir do mês 4, opcional)</h3>
+    <p style="margin-bottom:14px;font-size:.95rem">Depois que o NR 35 for validado, a remuneração passa a acompanhar o resultado: <b>só ganhamos mais quando a cliente vende mais</b>.</p>
+    <table>
+      <tr><th>Item</th><th>Valor</th></tr>
+      <tr><td>Gestão mensal de todas as campanhas ativas</td><td>R$ 1.200 / mês</td></tr>
+      <tr class="destaque"><td>Participação no faturamento das vendas vindas dos anúncios**</td><td>5%</td></tr>
+      <tr><td>Novo produto (NR 33, NR 10 ou NR 20): copy, página, configuração e kit de banners e roteiros</td><td>R$ 600 / produto (pagamento único)</td></tr>
+      <tr><td>Segurança em Foco (R$ 238,80/ano): oferta para alunos e remarketing</td><td>R$ 600 (pagamento único)</td></tr>
+    </table>
+    <div class="alerta">**Conta apenas o faturamento das vendas identificadas pelas UTMs e pelo relatório da Hotmart como vindas das campanhas pagas. Vendas orgânicas e indicações não entram no percentual. A apuração é mensal e o pagamento é feito até o dia 10 do mês seguinte.</div>
+  </div>
+</section>
+
+<!-- 6. RESPONSABILIDADES -->
+<section>
+  <div class="wrap">
+    <h2><small>06 · PARA COMEÇAR</small>O que precisamos da cliente</h2>
+    <p class="lead">Estes itens são <b>indispensáveis</b>. O cronograma só começa depois que eles forem enviados.</p>
+    <div class="grid">
+      <div class="card"><h3>🔑 Acessos</h3><ul>
+        <li><b>Hotmart:</b> acesso de colaborador para configurar o Pixel e as integrações</li>
+        <li><b>Meta:</b> Business Manager, conta de anúncios e página</li>
+        <li><b>Google:</b> conta do Google Ads e do Analytics</li>
+        <li>Cartão cadastrado nas plataformas para a verba</li>
+      </ul></div>
+      <div class="card"><h3>🌐 Domínio</h3><ul>
+        <li>Registro de <b>gisellediasnaseguranca.com.br</b> no Registro.br (≈ R$ 40/ano, pago pela cliente)</li>
+        <li>Nós orientamos o passo a passo</li>
+      </ul></div>
+      <div class="card"><h3>⭐ Depoimentos</h3><ul>
+        <li>Pelo menos <b>3 depoimentos</b> de alunos (vídeo, print ou texto) antes de a página ir ao ar</li>
+        <li>Fotos profissionais da Giselle</li>
+      </ul></div>
+      <div class="card"><h3>🎥 Vídeos</h3><ul>
+        <li>Gravar e editar os vídeos a partir dos roteiros enviados</li>
+        <li>Prazo sugerido: 7 dias após receber cada roteiro</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. ESCOPO -->
+<section>
+  <div class="wrap">
+    <h2><small>07 · ESCOPO</small>O que está e o que não está incluído</h2>
+    <div class="grid">
+      <div class="card"><h3>Incluído</h3><ul class="ok">
+        <li>Tudo o que está descrito no item 03</li>
+        <li>Até 2 rodadas de ajustes na copy e na página</li>
+        <li>Suporte por WhatsApp em horário comercial</li>
+        <li>1 reunião mensal de resultados</li>
+      </ul></div>
+      <div class="card"><h3>Não incluído</h3><ul class="no">
+        <li>Gravação e edição de vídeos</li>
+        <li>Verba de anúncios e custo do domínio</li>
+        <li>Gestão de redes sociais e posts orgânicos</li>
+        <li>Atendimento aos alunos e às vendas no WhatsApp</li>
+        <li>Mudanças no produto ou na área de membros da Hotmart</li>
+        <li>Garantia de número de vendas</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. FAQ -->
+<section>
+  <div class="wrap">
+    <h2><small>08 · DÚVIDAS</small>Perguntas frequentes</h2>
+    <details><summary>Por que não usar só a página da Hotmart?</summary><p>A página da Hotmart não permite personalizar a página, fazer testes nem configurar o rastreamento completo. Com uma página própria, os anúncios conversam com a página e as plataformas aprendem quem compra. Isso reduz o custo por venda.</p></details>
+    <details><summary>Por que a entrada a qualquer momento é uma vantagem?</summary><p>O aluno decide e começa na hora, sem esperar uma turma abrir. Isso permite manter as campanhas ativas o ano todo, com vendas diárias e mais previsíveis, sem picos e vales de lançamento.</p></details>
+    <details><summary>Em quanto tempo vêm as primeiras vendas?</summary><p>As campanhas entram no ar no fim do mês 1. As primeiras vendas costumam aparecer nas semanas seguintes, e o resultado se estabiliza entre os meses 2 e 3.</p></details>
+    <details><summary>Por que o contrato mínimo é de 3 meses?</summary><p>O Google e a Meta precisam de dados para otimizar as campanhas. Em um nicho específico como o de instrutores de NR, isso leva algumas semanas. Com menos tempo, a validação fica comprometida.</p></details>
+    <details><summary>Posso investir menos que R$ 1.500 em anúncios?</summary><p>Pode, mas o aprendizado das campanhas fica mais lento e o resultado, menos previsível. R$ 1.500 é o mínimo que recomendamos para validar o produto com segurança.</p></details>
+    <details><summary>E os outros cursos?</summary><p>Depois que o NR 35 for validado, cada novo produto custa R$ 600 (pagamento único), aproveitando toda a estrutura já pronta. Tudo passa a fazer parte da mesma gestão mensal.</p></details>
+    <details><summary>Como é calculado o percentual da expansão?</summary><p>São 5% sobre o faturamento das vendas rastreadas como vindas dos anúncios pagos, com base no relatório da Hotmart e nas UTMs. Vendas orgânicas não entram na conta.</p></details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h2>Vamos colocar o NR 35 para vender todos os dias?</h2>
+    <p style="opacity:.85;margin-top:8px">Para aprovar, basta clicar no botão abaixo. Em seguida enviamos o contrato e agendamos o briefing.</p>
+    <a class="btn" href="https://wa.me/5531993363606?text=Ol%C3%A1%20Rafael!%20Aprovei%20a%20proposta%20da%20Moca%20M%C3%ADdias%20para%20o%20NR%2035.%20Vamos%20come%C3%A7ar!" target="_blank">Aprovar pelo WhatsApp</a>
+    <div class="contato">📱 <a href="https://wa.me/5531993363606" target="_blank">(31) 99336-3606</a> · Rafael M. Carvalho</div>
+    <small>Moca Mídias · Proposta válida até 03/11/2026</small>
+  </div>
+</footer>
+
+</body>
+</html>
