@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><script src="https://myhub.ia.br/canvas-vendor/tailwind.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auditoria de tráfego pago — Fassini Sofás | Moca Mídias</title>
+  <meta name="description" content="Auditoria das campanhas de tráfego pago da Fassini Sofás e plano de ação para iniciar vendas pelo e-commerce.">
+  <meta name="theme-color" content="#372261">
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    :root {
+      --primary: #372261;
+      --primary-light: #4A2D7A;
+      --primary-dark: #2A1A4A;
+      --primary-soft: #F3EEF9;
+      --accent: #D4A843;
+      --accent-dark: #B8922E;
+      --text: #1A1A2E;
+      --muted: #5A5A72;
+      --light: #8A8A9E;
+      --white: #FFFFFF;
+      --bg: #F8F6FC;
+      --border: #E8E0F0;
+      --green: #23734B;
+      --green-bg: #EAF5EE;
+      --amber: #8B6410;
+      --amber-bg: #FFF7E3;
+      --shadow: 0 8px 28px rgba(55, 34, 97, .09);
+      --radius: 16px;
+      --max: 1140px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--white);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--primary-light); }
+    img { display: block; max-width: 100%; }
+    .container { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+    section { padding: 72px 0; }
+    .alt { background: var(--bg); }
+    .topbar {
+      background: var(--primary-dark);
+      color: var(--white);
+      padding: 17px 0;
+    }
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand {
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -.3px;
+    }
+    .brand span { color: var(--accent); }
+    .topbar-note { color: rgba(255,255,255,.74); font-size: 13px; }
+    .hero {
+      color: var(--white);
+      padding: 72px 0 60px;
+      background:
+        radial-gradient(circle at 82% 20%, rgba(212,168,67,.18), transparent 30%),
+        linear-gradient(135deg, var(--primary), var(--primary-dark));
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      align-items: center;
+      gap: 42px;
+    }
+    .eyebrow {
+      display: inline-block;
+      color: var(--primary);
+      background: var(--primary-soft);
+      border-radius: 999px;
+      padding: 6px 13px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .hero .eyebrow { color: var(--accent); background: rgba(255,255,255,.10); }
+    h1, h2, h3 { line-height: 1.2; }
+    h1 {
+      max-width: 700px;
+      margin: 18px 0 18px;
+      font-size: clamp(34px, 5vw, 52px);
+      letter-spacing: -1.5px;
+    }
+    h1 em { color: var(--accent); font-style: normal; }
+    .hero p {
+      max-width: 680px;
+      margin: 0;
+      color: rgba(255,255,255,.82);
+      font-size: 17px;
+    }
+    .hero-meta {
+      margin-top: 27px;
+      color: rgba(255,255,255,.75);
+      font-size: 13px;
+    }
+    .hero-image {
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 18px;
+      background: var(--white);
+      box-shadow: 0 20px 45px rgba(0,0,0,.2);
+    }
+    .hero-image img { width: 100%; }
+    .hero-image figcaption {
+      padding: 10px 14px;
+      color: var(--muted);
+      font-size: 12px;
+      background: var(--white);
+    }
+
+    .summary-band {
+      background: var(--accent);
+      color: var(--primary-dark);
+      padding: 16px 0;
+    }
+    .summary-band .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 32px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .section-head { max-width: 760px; margin: 0 auto 34px; text-align: center; }
+    .section-head h2 {
+      margin: 14px 0 12px;
+      color: var(--primary);
+      font-size: clamp(27px, 4vw, 36px);
+      letter-spacing: -.6px;
+    }
+    .section-head p { margin: 0; color: var(--muted); }
+    h3 { color: var(--primary); }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: 0 3px 12px rgba(55,34,97,.04);
+    }
+    .card h3 { margin: 0 0 9px; font-size: 17px; }
+    .card p { margin: 0; color: var(--muted); font-size: 14px; }
+    .card .icon {
+      display: inline-flex;
+      width: 38px;
+      height: 38px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 13px;
+      border-radius: 11px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 18px;
+      font-weight: 800;
+    }
+    .callout {
+      margin-top: 22px;
+      padding: 19px 22px;
+      border: 1px solid #E8D59C;
+      border-left: 5px solid var(--accent);
+      border-radius: 12px;
+      background: var(--amber-bg);
+      color: #604A17;
+      font-size: 14px;
+    }
+    .callout strong { color: var(--primary-dark); }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .stat {
+      min-height: 105px;
+      padding: 18px 14px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--white);
+    }
+    .stat strong {
+      display: block;
+      color: var(--primary);
+      font-size: clamp(18px, 2vw, 24px);
+      line-height: 1.2;
+    }
+    .stat span { display: block; margin-top: 7px; color: var(--muted); font-size: 12px; }
+    .period-title { margin: 28px 0 0; color: var(--primary); font-size: 19px; }
+    .fine-print { color: var(--light); font-size: 12px; }
+
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--white);
+    }
+    table { width: 100%; border-collapse: collapse; min-width: 600px; }
+    th, td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--border); }
+    th { color: var(--primary); background: var(--primary-soft); font-size: 12px; text-transform: uppercase; letter-spacing: .4px; }
+    td { color: var(--muted); font-size: 14px; }
+    tr:last-child td { border-bottom: 0; }
+
+    .issue-list { display: grid; gap: 14px; }
+    .issue {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 16px;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: var(--white);
+      box-shadow: 0 3px 12px rgba(55,34,97,.035);
+    }
+    .issue-num {
+      display: flex;
+      width: 42px;
+      height: 42px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      color: var(--accent);
+      background: var(--primary);
+      font-weight: 800;
+    }
+    .issue h3 { margin: 0 0 7px; font-size: 17px; }
+    .issue p { margin: 0 0 8px; color: var(--muted); font-size: 14px; }
+    .solution { color: var(--green); font-size: 14px; font-weight: 650; }
+
+    .event-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 12px;
+      margin-top: 22px;
+    }
+    .event {
+      padding: 17px;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: var(--white);
+    }
+    .event strong { display: block; margin-bottom: 5px; color: var(--primary); font-size: 14px; }
+    .event span { display: block; color: var(--muted); font-size: 13px; }
+    .event small { color: var(--light); font-size: 11px; }
+
+    .budget-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+    .budget-side { padding: 30px; }
+    .budget-side + .budget-side { border-left: 1px solid var(--border); background: var(--bg); }
+    .budget-side .label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+    }
+    .budget-side .amount {
+      display: block;
+      margin: 8px 0;
+      color: var(--primary);
+      font-size: clamp(30px, 4vw, 40px);
+      font-weight: 850;
+      letter-spacing: -1px;
+    }
+    .budget-side p { color: var(--muted); font-size: 14px; }
+    .budget-side ul { margin: 15px 0 0; padding-left: 19px; color: var(--muted); font-size: 14px; }
+    .budget-side li { margin: 7px 0; }
+    .badge {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 999px;
+      color: var(--green);
+      background: var(--green-bg);
+      font-size: 11px;
+      font-weight: 800;
+    }
+    .phase-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    .phase {
+      position: relative;
+      padding: 23px 19px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: var(--white);
+    }
+    .phase b {
+      display: inline-flex;
+      width: 30px;
+      height: 30px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      border-radius: 50%;
+      color: var(--primary-dark);
+      background: var(--accent);
+      font-size: 13px;
+    }
+    .phase h3 { margin: 0 0 7px; font-size: 16px; }
+    .phase p { margin: 0; color: var(--muted); font-size: 13px; }
+    .scope-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 25px;
+    }
+    .scope-box {
+      padding: 23px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: var(--white);
+    }
+    .scope-box h3 { margin: 0 0 10px; }
+    .scope-box ul { margin: 0; padding-left: 19px; color: var(--muted); font-size: 14px; }
+    .scope-box li { margin: 8px 0; }
+
+    .source-note {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border-radius: 12px;
+      background: var(--primary-soft);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .source-note a { font-weight: 700; }
+    .closing {
+      padding: 52px 0;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    }
+    .closing h2 { margin: 0 0 12px; color: var(--white); font-size: clamp(25px, 4vw, 34px); }
+    .closing p { max-width: 800px; margin: 0; color: rgba(255,255,255,.82); }
+    footer {
+      padding: 24px 0;
+      color: rgba(255,255,255,.7);
+      background: #20143A;
+      text-align: center;
+      font-size: 12px;
+    }
+    footer strong { color: var(--accent); }
+
+    @media (max-width: 800px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-image { max-width: 520px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .phase-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      section { padding: 54px 0; }
+      .container { width: min(100% - 28px, var(--max)); }
+      .topbar-inner { align-items: flex-start; flex-direction: column; gap: 4px; }
+      .hero { padding: 52px 0 44px; }
+      .summary-band .container { gap: 9px 16px; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .stat { min-height: 94px; padding: 15px 12px; }
+      .issue { grid-template-columns: 40px 1fr; gap: 12px; padding: 17px; }
+      .issue-num { width: 36px; height: 36px; }
+      .budget-card, .scope-grid { grid-template-columns: 1fr; }
+      .budget-side + .budget-side { border-top: 1px solid var(--border); border-left: 0; }
+      .phase-grid { grid-template-columns: 1fr; }
+    }
+    @media print {
+      .topbar { position: static; }
+      section { padding: 42px 0; }
+      .card, .issue, .phase, .budget-card { break-inside: avoid; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">Moca<span>Mídias</span></div>
+      <div class="topbar-note">Auditoria de tráfego pago · Fassini Sofás</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Diagnóstico e plano de ação</span>
+          <h1>Mais clareza para vender sofás <em>pelo site</em></h1>
+          <p>
+            Este documento apresenta o cenário atual das campanhas, os pontos que podem ser melhorados
+            e uma proposta inicial para começar a medir e testar vendas na loja virtual.
+          </p>
+          <div class="hero-meta">Preparado para Fassini Sofás · Referência: informações compartilhadas para esta auditoria</div>
+        </div>
+        <figure class="hero-image">
+          <img src="https://d31zra5bs5df64.cloudfront.net/prod/366iYtghNWQa4MuaJhLfGcfu9Sf/chat/3LR8ggK8dt9J9MfmHrs4u2Cyi9w/3LRDFgpSmmumXOxwdGOFr8Op4Rb.png?Expires=1793411484&Key-Pair-Id=K2FT0I8VPJSP5H&Signature=Kv6wq4Urb-tqVeFfuFedPgRlzHrxCVJz5SigJcpCKd6k7JtK4EeVDPXmZOpCx7MoABMayoizM6f8-hGKTsIsROJ~PUgEZGBcBfj2Xf6zfVRGx0WNSJ4XWzmaxgb2WnSX6mUoc~zXadSqoOlQccvCwe4OafX8-LgfvK3QJ6QCpAJw-cmLp9PvV918WN3jix0YAAhyMACbcZoLzgNLJsT7qBYfB~s3jkHEelDF20o2grtdA60O2G6lOxOvGEKIC19N8uxwe47Tmk6LRWtT4hqIE2ED0e03GnuQNu5rlmiu6-EXbUsfyKVr1tqyHgjHU3~~AR~VFddo19P4fTJrs-FMjw__" alt="Anúncio atual da Fassini Sofás">
+          <figcaption>Exemplo de anúncio atual: sofá, preço e chamada para conversar pelo WhatsApp.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="summary-band">
+      <div class="container">
+        <span>Produto principal: sofás de marca própria</span>
+        <span>Faixa dos principais produtos: R$ 2.977 a R$ 3.397</span>
+        <span>Objetivo: ampliar vendas diretas pelo site</span>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Resumo executivo</span>
+          <h2>O que a auditoria identificou</h2>
+          <p>
+            As campanhas atuais foram organizadas para gerar conversas no WhatsApp. Para avaliar vendas
+            realizadas no e-commerce, é necessário preparar a medição do site e iniciar um teste específico
+            para compras.
+          </p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <div class="icon">01</div>
+            <h3>Campanhas voltadas a conversas</h3>
+            <p>As duas campanhas ativas têm como objetivo iniciar conversas por mensagem. O principal resultado acompanhado é o número e o custo dessas conversas.</p>
+          </article>
+          <article class="card">
+            <div class="icon">02</div>
+            <h3>Vendas do site sem medição confiável</h3>
+            <p>O pixel não está instalado ou validado no site e os eventos disponíveis aparecem zerados. Assim, não é possível associar com segurança os anúncios às compras concluídas.</p>
+          </article>
+          <article class="card">
+            <div class="icon">03</div>
+            <h3>Sem histórico organizado de pedidos</h3>
+            <p>Ainda não há relatórios de vendas por canal, ticket médio, pedidos pagos, cancelamentos ou devoluções para comparar com os dados das campanhas.</p>
+          </article>
+          <article class="card">
+            <div class="icon">04</div>
+            <h3>Oportunidade de testar o e-commerce</h3>
+            <p>Uma campanha direcionada à compra no site pode ser testada em paralelo, com verba definida para esse objetivo e análise dos pedidos confirmados pela loja.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Resultados informados</span>
+          <h2>Desempenho das campanhas de WhatsApp</h2>
+          <p>Os resultados abaixo mostram geração de conversas e entrega dos anúncios. Eles não informam quantas conversas se transformaram em vendas pagas.</p>
+        </div>
+
+        <h3 class="period-title">Últimos 90 dias</h3>
+        <div class="stats-grid">
+          <div class="stat"><strong>4.401</strong><span>Conversas iniciadas</span></div>
+          <div class="stat"><strong>R$ 11,83</strong><span>Custo por conversa</span></div>
+          <div class="stat"><strong>R$ 52.049,70</strong><span>Valor gasto informado</span></div>
+          <div class="stat"><strong>1.305.005</strong><span>Impressões</span></div>
+          <div class="stat"><strong>313.692</strong><span>Contas alcançadas</span></div>
+        </div>
+
+        <h3 class="period-title">Últimos 12 meses</h3>
+        <div class="stats-grid">
+          <div class="stat"><strong>10.847</strong><span>Conversas iniciadas</span></div>
+          <div class="stat"><strong>R$ 8,95</strong><span>Custo por conversa</span></div>
+          <div class="stat"><strong>R$ 97.065,59</strong><span>Valor gasto informado</span></div>
+          <div class="stat"><strong>2.811.905</strong><span>Impressões</span></div>
+          <div class="stat"><strong>562.475</strong><span>Contas alcançadas</span></div>
+        </div>
+        <p class="fine-print">Alcance representa contas alcançadas conforme o relatório da plataforma. Os resultados de conversa não substituem a confirmação de vendas e pagamentos na loja.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Cenário atual</span>
+          <h2>Como as campanhas estão configuradas</h2>
+          <p>Este é o retrato das campanhas de WhatsApp identificado a partir das informações disponíveis.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Item</th><th>Cenário identificado</th><th>O que revisar</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Campanhas</td><td>Duas campanhas ativas com objetivo de iniciar conversas por mensagem.</td><td>Manter a frente de WhatsApp separada da nova frente de vendas pelo site.</td></tr>
+              <tr><td>Otimização</td><td>Estratégia de lance para buscar o maior volume.</td><td>Para o e-commerce, testar otimização para compras depois que a loja registrar corretamente os pedidos.</td></tr>
+              <tr><td>Orçamento informado</td><td>R$ 200 por dia em cada campanha.</td><td>Definir uma verba própria para o teste do e-commerce, sem misturar os resultados com WhatsApp.</td></tr>
+              <tr><td>Público e idade</td><td>Idade mínima de 23 anos e públicos de interação listados na conta.</td><td>Revisar o público com base nos dados reais de compradores e excluir compradores quando houver uma lista confiável.</td></tr>
+              <tr><td>Região</td><td>A área comercial informada é Sudeste, mas a lista geográfica atual está concentrada em localidades do Rio de Janeiro.</td><td>Conferir a cobertura de São Paulo, Minas Gerais e Espírito Santo e ajustar as áreas às condições reais de entrega.</td></tr>
+              <tr><td>Posicionamentos</td><td>Anúncios somente no Instagram: feed, stories e reels.</td><td>Testar a distribuição em outros posicionamentos disponíveis e comparar o resultado, mantendo formatos adequados para cada espaço.</td></tr>
+              <tr><td>Anúncios</td><td>Imagens de linhas de sofás com preço e direcionamento direto ao WhatsApp.</td><td>Testar também vídeos, detalhes do produto, medidas, conforto, diferenciais, entrega e chamadas para compra no site.</td></tr>
+              <tr><td>Horários</td><td>Campanhas de WhatsApp pausadas na sexta e reativadas na segunda, pois a equipe não atende no fim de semana.</td><td>Separar a decisão de horário do WhatsApp da campanha de compra no site, que pode receber pedidos fora do horário de atendimento.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Pontos de melhoria</span>
+          <h2>Problemas identificados e soluções propostas</h2>
+          <p>As ações abaixo priorizam o que precisa estar organizado para medir vendas e tomar decisões melhores.</p>
+        </div>
+        <div class="issue-list">
+          <article class="issue">
+            <div class="issue-num">1</div>
+            <div>
+              <h3>O site não informa à plataforma quando uma compra acontece</h3>
+              <p>Sem essa informação, a campanha não consegue aprender quais anúncios, públicos e produtos ajudam a gerar pedidos. A equipe também não consegue comparar os resultados do anúncio com as vendas reais do e-commerce.</p>
+              <div class="solution">Solução: configurar e testar a medição das principais etapas da compra antes de avaliar o desempenho da campanha de vendas.</div>
+            </div>
+          </article>
+          <article class="issue">
+            <div class="issue-num">2</div>
+            <div>
+              <h3>Não há públicos de visitantes e compradores formados pelo site</h3>
+              <p>Como a atividade do site não está sendo registrada, não há uma base confirmada de pessoas que visualizaram produtos, iniciaram uma compra ou compraram. Os públicos de interação social listados podem ser úteis, mas não substituem o remarketing de quem visitou a loja.</p>
+              <div class="solution">Solução: começar a formar esses públicos após validar a medição e, com volume suficiente, testar anúncios específicos para retomar o interesse.</div>
+            </div>
+          </article>
+          <article class="issue">
+            <div class="issue-num">3</div>
+            <div>
+              <h3>As conversas não estão conectadas aos pedidos</h3>
+              <p>Não há registro centralizado que mostre se uma conversa virou venda, qual foi o produto, a origem do contato ou a situação do pagamento.</p>
+              <div class="solution">Solução: usar o sistema de controle de vendas em desenvolvimento para registrar, por pedido, a origem, o produto, a região, o valor e a situação do pagamento.</div>
+            </div>
+          </article>
+          <article class="issue">
+            <div class="issue-num">4</div>
+            <div>
+              <h3>Faltam indicadores comerciais para definir metas sustentáveis</h3>
+              <p>Sem ticket médio, volume de pedidos e margem, não é possível estabelecer quanto a empresa pode investir para conquistar uma venda sem comprometer o resultado do negócio.</p>
+              <div class="solution">Solução: levantar mensalmente vendas, custos, margem, frete, taxas, cancelamentos e devoluções por produto e canal.</div>
+            </div>
+          </article>
+          <article class="issue">
+            <div class="issue-num">5</div>
+            <div>
+              <h3>O frete varia conforme o estado</h3>
+              <p>O cliente pode desistir se descobrir o custo ou a condição de entrega somente depois de clicar no anúncio ou avançar na compra.</p>
+              <div class="solution">Solução: deixar preço, frete e prazo de entrega visíveis no anúncio e na página do produto, confirmando as condições de cada região.</div>
+            </div>
+          </article>
+          <article class="issue">
+            <div class="issue-num">6</div>
+            <div>
+              <h3>Os anúncios podem mostrar mais motivos para comprar</h3>
+              <p>As imagens atuais mostram o sofá e o preço. Para uma compra de maior valor, informações adicionais podem ajudar o consumidor a avaliar o produto.</p>
+              <div class="solution">Solução: testar peças com medidas, materiais, diferenciais de qualidade, detalhes de acabamento, conforto, condições de pagamento e entrega.</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Medição da loja</span>
+          <h2>O que precisamos registrar no e-commerce</h2>
+          <p>A configuração deve acompanhar o percurso do consumidor desde a visita até a compra. Os nomes abaixo são os registros que serão usados para identificar cada etapa.</p>
+        </div>
+        <div class="event-list">
+          <div class="event"><strong>Visualização de página</strong><span>Registra visitas às páginas da loja.</span><small>PageView</small></div>
+          <div class="event"><strong>Visualização de produto</strong><span>Indica quais sofás e produtos foram consultados.</span><small>ViewContent</small></div>
+          <div class="event"><strong>Busca na loja</strong><span>Mostra quando a pessoa pesquisa um produto ou termo.</span><small>Search</small></div>
+          <div class="event"><strong>Adição ao carrinho</strong><span>Registra os produtos que despertaram intenção de compra.</span><small>AddToCart</small></div>
+          <div class="event"><strong>Início da finalização</strong><span>Indica que a pessoa começou a concluir o pedido.</span><small>InitiateCheckout</small></div>
+          <div class="event"><strong>Informação de pagamento</strong><span>Registra a etapa em que os dados de pagamento são informados, quando disponível.</span><small>AddPaymentInfo</small></div>
+          <div class="event"><strong>Compra concluída</strong><span>Registra o pedido, seu valor e a moeda. Deve ser comparado com a confirmação da loja.</span><small>Purchase</small></div>
+          <div class="event"><strong>Contato iniciado</strong><span>Ajuda a acompanhar contatos pelo WhatsApp sem confundi-los com compras.</span><small>Contact</small></div>
+          <div class="event"><strong>Lista de desejos</strong><span>Pode ser acompanhado se a loja oferecer essa função.</span><small>AddToWishlist</small></div>
+        </div>
+        <div class="callout">
+          <strong>Como será feito:</strong> a instalação do pixel e a avaliação da integração de eventos pela plataforma de servidor serão alinhadas com a equipe técnica da loja. A disponibilidade e o formato da integração dependem da plataforma proprietária. Depois, os registros devem ser testados para reduzir falhas e evitar contar a mesma compra mais de uma vez.
+        </div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Métricas de mercado</span>
+          <h2>O que dá para estimar — e o que ainda não dá</h2>
+          <p>Não há, nas referências públicas consultadas, uma base suficientemente confiável e específica para prever o custo por compra de sofás no e-commerce brasileiro.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <div class="icon">R$</div>
+            <h3>Referência ampla, não específica</h3>
+            <p>Uma compilação de benchmarks de e-commerce apresenta CPC de link próximo a R$ 2,17 e taxa de conversão geral próxima de 1,6%. São referências amplas, não exclusivas de móveis ou sofás.</p>
+          </article>
+          <article class="card">
+            <div class="icon">!</div>
+            <h3>Não é uma previsão de pedidos</h3>
+            <p>Esses dados não garantem o custo real dos cliques, a quantidade de visitas que chega ao site nem quantas pessoas vão comprar. Preço, frete, prazo, margem e experiência da loja influenciam o resultado.</p>
+          </article>
+          <article class="card">
+            <div class="icon">✓</div>
+            <h3>A referência correta será a da própria loja</h3>
+            <p>Após a medição, a meta deverá ser ajustada com base em visitas, pedidos pagos, valor das compras e margem de contribuição dos produtos.</p>
+          </article>
+        </div>
+        <div class="source-note">
+          Fonte de referência geral: <a href="https://www.vtgroup.com.br/traffic-ai/benchmarks" target="_blank" rel="noopener">Benchmarks de Meta Ads no Brasil — Traffic AI</a>.
+          A página reúne referências gerais de e-commerce; não fornece um custo por compra validado especificamente para sofás.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Teste de vendas pelo site</span>
+          <h2>Verba sugerida para o primeiro mês</h2>
+          <p>O primeiro mês deve ser tratado como uma etapa de implantação, validação e aprendizado — não como uma promessa de quantidade de pedidos ou faturamento.</p>
+        </div>
+        <div class="budget-card">
+          <div class="budget-side">
+            <span class="label">Faixa sugerida para mídia</span>
+            <strong class="amount">R$ 3.000–4.500</strong>
+            <span class="badge">Verba paga diretamente à Meta</span>
+            <p>Equivale a aproximadamente R$ 100 a R$ 150 por dia, considerando 30 dias de campanha.</p>
+            <ul>
+              <li>R$ 3.000: ponto inicial mais controlado.</li>
+              <li>R$ 4.500: mais espaço para testar anúncios e públicos.</li>
+              <li>O valor final deve ser aprovado pelo cliente antes da ativação.</li>
+            </ul>
+          </div>
+          <div class="budget-side">
+            <span class="label">Leitura ilustrativa do volume</span>
+            <strong class="amount">1.380–2.070</strong>
+            <p>Estimativa aproximada de cliques se o custo por clique ficasse próximo à referência geral de R$ 2,17.</p>
+            <ul>
+              <li>É uma conta ilustrativa, não uma previsão de tráfego ou vendas.</li>
+              <li>Cliques não equivalem necessariamente a visitas efetivas.</li>
+              <li>O custo por compra só poderá ser avaliado com eventos funcionando e pedidos confirmados pela loja.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout">
+          <strong>Importante:</strong> a verba do teste de e-commerce deve ser identificada separadamente da verba de WhatsApp. O teste só deve ser avaliado como campanha de vendas depois que a compra estiver sendo registrada e conferida com os pedidos pagos da loja.
+        </div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Dados para definir metas</span>
+          <h2>Informações que precisamos receber da loja</h2>
+          <p>Esses dados ajudam a entender o valor de cada venda e a decidir se o investimento em anúncios está contribuindo para um resultado saudável.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Informação</th><th>Por que precisamos dela</th><th>Frequência sugerida</th></tr></thead>
+            <tbody>
+              <tr><td>Pedidos pagos e faturamento por mês</td><td>Comparar as campanhas com vendas concluídas e receita real.</td><td>Mensal</td></tr>
+              <tr><td>Vendas por canal: site, WhatsApp e outros</td><td>Entender de onde vêm os pedidos e evitar atribuir a venda ao canal errado.</td><td>Mensal</td></tr>
+              <tr><td>Ticket médio e quantidade de pedidos</td><td>Estabelecer uma referência comercial e acompanhar mudanças no volume.</td><td>Mensal</td></tr>
+              <tr><td>Produto, região e valor de cada pedido</td><td>Identificar quais modelos e áreas geram mais oportunidades.</td><td>Por pedido</td></tr>
+              <tr><td>Custos do produto e margem de contribuição</td><td>Definir o custo máximo de aquisição que o negócio pode suportar.</td><td>Por produto, revisar quando mudar</td></tr>
+              <tr><td>Frete, taxas de pagamento e parcelamento</td><td>Considerar os custos variáveis que afetam o resultado de cada venda.</td><td>Por região e condição</td></tr>
+              <tr><td>Pedidos cancelados, devolvidos ou estornados</td><td>Separar pedidos registrados de vendas que permaneceram válidas.</td><td>Mensal</td></tr>
+              <tr><td>Vendas originadas em conversas</td><td>Medir a contribuição do WhatsApp e melhorar o atendimento comercial.</td><td>Por pedido</td></tr>
+              <tr><td>Estoque e prazo de entrega por região</td><td>Direcionar anúncios apenas para produtos e áreas com atendimento confirmado.</td><td>Atualizar quando houver mudanças</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Plano de ação</span>
+          <h2>Como vamos organizar o trabalho</h2>
+          <p>As etapas podem avançar em sequência. A campanha de vendas depende da validação da medição e das condições de compra na loja.</p>
+        </div>
+        <div class="phase-grid">
+          <article class="phase">
+            <b>1</b>
+            <h3>Preparar a medição</h3>
+            <p>Alinhar a instalação do pixel e, se disponível, a integração de servidor. Testar as etapas do carrinho e a compra concluída.</p>
+          </article>
+          <article class="phase">
+            <b>2</b>
+            <h3>Preparar a loja e os anúncios</h3>
+            <p>Conferir preço, frete, prazo, pagamento, estoque e páginas dos produtos. Preparar anúncios com informações claras e formatos variados.</p>
+          </article>
+          <article class="phase">
+            <b>3</b>
+            <h3>Iniciar o teste de vendas</h3>
+            <p>Criar uma campanha separada para compra no site, com produtos e regiões confirmados e verba de teste aprovada.</p>
+          </article>
+          <article class="phase">
+            <b>4</b>
+            <h3>Acompanhar e aprender</h3>
+            <p>Comparar os dados da plataforma com os pedidos da loja, avaliar o percurso de compra e recomendar os próximos ajustes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Gestão do primeiro mês</span>
+          <h2>Escopo e investimento</h2>
+          <p>O trabalho será direcionado à preparação e ao acompanhamento inicial das campanhas de vendas pelo site.</p>
+        </div>
+        <div class="scope-grid">
+          <div class="scope-box">
+            <h3>Incluído na gestão</h3>
+            <ul>
+              <li>Organização do plano inicial para campanhas de venda pelo site.</li>
+              <li>Acompanhamento da preparação e validação da medição, em alinhamento com a equipe técnica da loja.</li>
+              <li>Configuração e gestão das campanhas dentro do escopo e dos acessos disponíveis.</li>
+              <li>Revisão de públicos, regiões, anúncios e páginas de destino.</li>
+              <li>Acompanhamento dos resultados e recomendações de otimização.</li>
+              <li>Resumo dos dados disponíveis, aprendizados e próximos passos.</li>
+            </ul>
+          </div>
+          <div class="scope-box">
+            <h3>Investimentos separados</h3>
+            <ul>
+              <li><strong>Gestão de tráfego no primeiro mês: R$ 1.000.</strong></li>
+              <li><strong>Verba de mídia: R$ 3.000 a R$ 4.500 sugeridos</strong>, paga diretamente à Meta e aprovada pelo cliente.</li>
+              <li>O valor da gestão não inclui a verba de anúncios.</li>
+              <li>Se a plataforma proprietária exigir desenvolvimento ou serviço técnico adicional para instalar a medição, essa necessidade deverá ser avaliada separadamente.</li>
+              <li>Os resultados dependem também de preço, margem, estoque, entrega, experiência de compra e atendimento da loja; não há garantia de faturamento ou número de pedidos.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Indicadores de acompanhamento</span>
+          <h2>O que vamos observar</h2>
+          <p>No início, a prioridade é confirmar que a medição funciona e localizar em que etapa as pessoas avançam ou desistem.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card"><h3>Interesse</h3><p>Visitas à loja, visualizações de produtos e buscas realizadas.</p></article>
+          <article class="card"><h3>Intenção de compra</h3><p>Adições ao carrinho e inícios da finalização do pedido.</p></article>
+          <article class="card"><h3>Vendas confirmadas</h3><p>Compras registradas, pedidos pagos, valor vendido e confirmação nos dados da loja.</p></article>
+          <article class="card"><h3>Qualidade do resultado</h3><p>Custo por compra, cancelamentos, devoluções e desempenho por produto e região.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="container">
+        <h2>O primeiro passo é medir corretamente.</h2>
+        <p>
+          A Fassini Sofás já tem campanhas que geram conversas. A oportunidade agora é preparar o site
+          para registrar as compras, iniciar um teste de vendas com verba própria e avaliar os resultados
+          junto aos pedidos reais. Com dados de vendas e margem, será possível definir metas mais realistas
+          e decidir com mais segurança como evoluir o investimento.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <strong>Moca Mídias</strong> · Auditoria de tráfego pago e plano de ação para e-commerce
+    </div>
+  </footer>
+</body>
+</html>
